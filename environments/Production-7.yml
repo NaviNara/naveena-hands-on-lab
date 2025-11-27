@@ -1,0 +1,11 @@
+fileVersion: 1
+id: "7"
+mappingDefinitions:
+  ASSIGNMENT:
+    database: NAVEENA
+    schema: WORKDEV
+  SRC:
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCH_SF1
+name: Production
+type: Environment

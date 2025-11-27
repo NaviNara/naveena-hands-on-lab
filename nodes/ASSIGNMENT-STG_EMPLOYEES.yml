@@ -1,0 +1,78 @@
+fileVersion: 1
+id: 7a3b7fb6-6e0c-472e-86bd-679216ac9df7
+name: STG_EMPLOYEES
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ASSIGNMENT
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: badbb579-7c29-43a0-adc4-81e28065253b
+          stepCounter: 7a3b7fb6-6e0c-472e-86bd-679216ac9df7
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: PHONE_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "'+1 555 123 4567'"
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fc46d852-ca27-4e19-adc6-a31f1c330b51
+          stepCounter: 7a3b7fb6-6e0c-472e-86bd-679216ac9df7
+        config: {}
+        dataType: VARCHAR (15)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: CLEAN_PHONE_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |2
+               {{ clean_phone_number('PHONE_NUMBER') }}
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies: []
+        join:
+          joinCondition: ""
+        name: STG_EMPLOYEES
+        noLinkRefs: []
+  name: STG_EMPLOYEES
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
