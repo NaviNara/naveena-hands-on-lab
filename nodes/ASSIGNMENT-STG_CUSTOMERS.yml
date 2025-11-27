@@ -1,79 +1,54 @@
 fileVersion: 1
-id: 45b71ffc-b3e5-48e8-bb35-c530afaac940
+id: 837b25d6-aa20-457c-92a8-03b1774d485a
 name: STG_CUSTOMERS
 operation:
-  config:
-    insertStrategy: INSERT
-    postSQL: ""
-    preSQL: ""
-    testsEnabled: true
-    truncateBefore: true
   database: ""
   deployEnabled: true
   description: ""
-  isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: table
   metadata:
-    appliedNodeTests: []
     columns:
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 7a114ed8-103b-43ef-86bc-81053b94c9f1
-          stepCounter: 45b71ffc-b3e5-48e8-bb35-c530afaac940
+          columnCounter: d5cc8eb4-02e0-43d7-a008-9e79d2367897
+          stepCounter: 837b25d6-aa20-457c-92a8-03b1774d485a
         config: {}
-        dataType: STRING
+        dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        keyColumnType: None
         name: PHONE_NUMBER
         nullable: true
+        primaryKey: false
         sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: "0"
-                stepCounter: "0"
-            transform: "'(555)-123-4567'"
-        systemColumnType: None
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: eecc0a0c-6930-44c5-9b04-b5cbc1269fba
-          stepCounter: 45b71ffc-b3e5-48e8-bb35-c530afaac940
+          columnCounter: 60e39680-5fdc-4395-820e-9c6b73dc0d8f
+          stepCounter: 837b25d6-aa20-457c-92a8-03b1774d485a
         config: {}
-        dataType: VARCHAR (15)
+        dataType: VARCHAR(15)
         defaultValue: ""
         description: ""
-        keyColumnType: None
         name: CLEAN_PHONE_NUMBER
         nullable: true
+        primaryKey: false
         sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: "0"
-                stepCounter: "0"
-            transform: |
-              {{ clean_phone_number('PHONE_NUMBER') }}
-        systemColumnType: None
-    cteString: ""
-    enabledColumnTestIDs: []
-    sourceMapping:
-      - aliases: {}
-        customSQL:
-          customSQL: ""
-        dependencies: []
-        join:
-          joinCondition: |+
-
-        name: STG_CUSTOMERS
-        noLinkRefs: []
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
   name: STG_CUSTOMERS
-  overrideSQL: false
   schema: ""
-  sqlType: Stage
-  type: sql
+  sqlType: Source
+  type: sourceInput
   version: 1
 type: Node

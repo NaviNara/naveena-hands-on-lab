@@ -1,78 +1,54 @@
 fileVersion: 1
-id: f2573b1c-b782-411c-a45e-a88df5d6c87d
+id: 17677d0c-0c6b-4aa4-b29e-2f79956c9b38
 name: STG_SUPPLIERS
 operation:
-  config:
-    insertStrategy: INSERT
-    postSQL: ""
-    preSQL: ""
-    testsEnabled: true
-    truncateBefore: true
   database: ""
   deployEnabled: true
   description: ""
-  isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: table
   metadata:
-    appliedNodeTests: []
     columns:
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 547c8066-09c0-4a1f-b11c-4950c9a9baa7
-          stepCounter: f2573b1c-b782-411c-a45e-a88df5d6c87d
+          columnCounter: be99e24d-9818-44cd-a8e6-36ae1ef2c104
+          stepCounter: 17677d0c-0c6b-4aa4-b29e-2f79956c9b38
         config: {}
-        dataType: STRING
+        dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        keyColumnType: None
         name: PHONE_NUMBER
         nullable: true
+        primaryKey: false
         sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: "0"
-                stepCounter: "0"
-            transform: "'555.123.456'"
-        systemColumnType: None
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: e6065525-d1c0-463d-89ea-b24e70f51c63
-          stepCounter: f2573b1c-b782-411c-a45e-a88df5d6c87d
+          columnCounter: 2f44ea5b-ab12-4e99-b632-0dbd2713f9ae
+          stepCounter: 17677d0c-0c6b-4aa4-b29e-2f79956c9b38
         config: {}
-        dataType: VARCHAR (15)
+        dataType: VARCHAR(15)
         defaultValue: ""
         description: ""
-        keyColumnType: None
         name: CLEAN_PHONE_NUMBER
         nullable: true
+        primaryKey: false
         sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: "0"
-                stepCounter: "0"
-            transform: |
-              {{ clean_phone_number('PHONE_NUMBER') }}
-        systemColumnType: None
-    cteString: ""
-    enabledColumnTestIDs: []
-    sourceMapping:
-      - aliases: {}
-        customSQL:
-          customSQL: ""
-        dependencies: []
-        join:
-          joinCondition: ""
-        name: STG_SUPPLIERS
-        noLinkRefs: []
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
   name: STG_SUPPLIERS
-  overrideSQL: false
   schema: ""
-  sqlType: Stage
-  type: sql
+  sqlType: Source
+  type: sourceInput
   version: 1
 type: Node

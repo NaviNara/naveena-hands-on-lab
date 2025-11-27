@@ -1,0 +1,168 @@
+fileVersion: 1
+id: 555e80e6-9357-4fa3-8137-6f5c38b90c86
+name: VIEW_ACTIVE_ORDER
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: ASSIGNMENT
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a160957e-606b-440f-80d5-7ff577fd1f0f
+          stepCounter: 555e80e6-9357-4fa3-8137-6f5c38b90c86
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: PSTG_ORDER_KEY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 21244d0e-a3be-41d9-ac5e-ba770931a8d5
+          stepCounter: 555e80e6-9357-4fa3-8137-6f5c38b90c86
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: SYSTEM_VERSION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7903ff6d-f8c7-4ed0-a172-61560d369605
+          stepCounter: 555e80e6-9357-4fa3-8137-6f5c38b90c86
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: SYSTEM_CURRENT_FLAG
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 01d9d56a-cda7-4ea6-a1c7-40dd2c637648
+          stepCounter: 555e80e6-9357-4fa3-8137-6f5c38b90c86
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ORDER_TOTAL_LOCAL_CURRENCY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 27644a14-2de8-4f91-822e-07bde96f58ed
+          stepCounter: 555e80e6-9357-4fa3-8137-6f5c38b90c86
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: SYSTEM_START_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7dcd4edc-8d48-4aea-b031-7c5b54e2c166
+          stepCounter: 555e80e6-9357-4fa3-8137-6f5c38b90c86
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: SYSTEM_END_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c31dd90a-5ecf-4863-b50f-932cb8216c29
+          stepCounter: 555e80e6-9357-4fa3-8137-6f5c38b90c86
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ca28a0a6-5e67-4e60-85b6-fe17ea3e1ba5
+          stepCounter: 555e80e6-9357-4fa3-8137-6f5c38b90c86
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: VIEW_ACTIVE_ORDER
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

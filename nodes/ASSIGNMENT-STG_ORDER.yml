@@ -1,0 +1,35 @@
+fileVersion: 1
+id: f2c54f75-e218-4ab5-9f0e-e27caf7eb514
+name: STG_ORDER
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: ASSIGNMENT
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c4b391ae-1737-48ff-b93a-bb47645cbcbe
+          stepCounter: f2c54f75-e218-4ab5-9f0e-e27caf7eb514
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ORDER_TOTAL_LOCAL_CURRENCY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: STG_ORDER
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

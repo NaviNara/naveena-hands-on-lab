@@ -1,0 +1,73 @@
+fileVersion: 1
+id: 1244baf6-25f3-431d-ac5d-5699783cbe8e
+name: FCT_SALES
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: ASSIGNMENT
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4930c5da-2970-493b-a487-75e5de9ff8e4
+          stepCounter: 1244baf6-25f3-431d-ac5d-5699783cbe8e
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ORDER_TOTAL_LOCAL_CURRENCY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5034741f-b10f-4c2c-b920-5f064df49482
+          stepCounter: 1244baf6-25f3-431d-ac5d-5699783cbe8e
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8e6e9dc8-fd14-4ba2-a0d6-a179637f4b7b
+          stepCounter: 1244baf6-25f3-431d-ac5d-5699783cbe8e
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: FCT_SALES
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
