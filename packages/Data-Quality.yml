@@ -7,10 +7,7 @@ config:
       "448":
         defaultStorageLocation: null
         isDisabled: false
-  packageVariables: |-
-    dqp:
-      metadata_table: PUBLIC.MY_CUSTOM_DMF_RULES
-      results_table: PUBLIC.MY_CUSTOM_DMF_RESULTS
+  packageVariables: ""
 fileVersion: 1
 id: "@coalesce/snowflake/data-quality"
 name: Data-Quality
