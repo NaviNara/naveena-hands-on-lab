@@ -6,7 +6,9 @@ operation:
     clusterKey: true
     clusterKeyConfig:
       items:
-        - columnName: null
+        - columnName:
+            columnCounter: 01650fcb-50b1-4322-a29f-3056f86405f4
+            stepCounter: 0788b005-933a-4f6c-8a4e-5c49b43c2148
     clusterKeyConfigExpressions:
       items:
         - {}
@@ -21,7 +23,7 @@ operation:
     orderBy:
       items:
         - colName:
-            columnCounter: a0b6ee5a-642f-47a9-aa94-7eb7662c2f52
+            columnCounter: cb9c96f5-581a-41a7-9d7e-036d9392f774
             stepCounter: 0788b005-933a-4f6c-8a4e-5c49b43c2148
     orderByDateTime:
       items:
@@ -32,14 +34,14 @@ operation:
     partitionBy:
       items:
         - partColName:
-            columnCounter: 18c9cc0f-d76b-4c2c-8699-c411b7adbb3f
+            columnCounter: ea064b7c-17bf-4598-b5d4-d8a95c68df13
             stepCounter: 0788b005-933a-4f6c-8a4e-5c49b43c2148
     recordVersioning: Datetime Column
     recordorderBy:
       items:
         - {}
     refresh_mode: AUTO
-    warehouseName: dev_wh_xs
+    warehouseName: COMPUTE_WH
   database: ""
   deployEnabled: true
   description: Region data as defined by TPC-H
@@ -176,6 +178,26 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: FIRST_VALUE({%if config.recordVersioning not in ('Integer Column')%}{{order_by_col()}}{%else%} {{order_by_col_int()}}{%endif%}) OVER (PARTITION BY {{ partition_by() }} ORDER BY {{ order_by_col() }} asc)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cb9c96f5-581a-41a7-9d7e-036d9392f774
+          stepCounter: 0788b005-933a-4f6c-8a4e-5c49b43c2148
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: TO_TIMESTAMP(CURRENT_TIMESTAMP())
+        systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
