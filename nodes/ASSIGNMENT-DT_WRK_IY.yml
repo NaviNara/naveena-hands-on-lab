@@ -1,0 +1,138 @@
+fileVersion: 1
+id: 4cf316c7-f65a-48ab-87ee-7c0cc217e92e
+name: DT_WRK_IY
+operation:
+  config:
+    advanceWarehouse: true
+    backfill: false
+    backfillSource: ""
+    backfillSourceSchema: ""
+    clusterKey: true
+    clusterKeyConfig:
+      items:
+        - columnName:
+            columnCounter: 653f4704-88c5-4ad1-921a-537474788f6e
+            stepCounter: 4cf316c7-f65a-48ab-87ee-7c0cc217e92e
+    clusterKeyConfigExpressions:
+      items:
+        - {}
+    clusterKeyExpressions: false
+    cpygrants: false
+    downstreamOption: true
+    groupByAll: false
+    immutabilityConstraint: false
+    immutableExpression: ""
+    initialize: ON_CREATE
+    initializeWarehouseSize: X-Small
+    insertStrategy: UNION ALL
+    lagSpecification:
+      items:
+        - {}
+    refreshWarehouseSize: X-Small
+    refresh_mode: AUTO
+    selectDistinct: false
+    timeTravel: false
+    timeTravelreference: ""
+    timeTraveltype: ""
+    timeTravelvalue: ""
+    warehouseName: compute_wh
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ASSIGNMENT
+  materializationType: dynamic table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7cdddb39-7521-4ee6-baab-f5a22c436c79
+          stepCounter: 4cf316c7-f65a-48ab-87ee-7c0cc217e92e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: IY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cf8059dd-dbfd-4a78-b779-09bc22531c67
+                stepCounter: 2866062a-959c-4498-b1e5-b08e51f3a99c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 653f4704-88c5-4ad1-921a-537474788f6e
+          stepCounter: 4cf316c7-f65a-48ab-87ee-7c0cc217e92e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e9879fb0-42c1-4f74-b9cc-e4805d99fcdf
+                stepCounter: 2866062a-959c-4498-b1e5-b08e51f3a99c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 32e69235-32fe-4937-b276-89e722821ff4
+          stepCounter: 4cf316c7-f65a-48ab-87ee-7c0cc217e92e
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b7984221-d638-4546-8cf5-428733365ef7
+                stepCounter: 2866062a-959c-4498-b1e5-b08e51f3a99c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 38d29645-82e6-4433-8c0d-fdecd1343c40
+          stepCounter: 4cf316c7-f65a-48ab-87ee-7c0cc217e92e
+        config: {}
+        dataType: DATE
+        description: ""
+        name: CREATED_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 86cf976e-5b1c-4f13-bf59-4f435ef760f6
+                stepCounter: 2866062a-959c-4498-b1e5-b08e51f3a99c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d54ce37f-1081-4518-8cec-6bdd9a37d295
+          stepCounter: 4cf316c7-f65a-48ab-87ee-7c0cc217e92e
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: CREATED_TS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1692c4ae-5678-4b1d-b69c-01483d927333
+                stepCounter: 2866062a-959c-4498-b1e5-b08e51f3a99c
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          IY: 2866062a-959c-4498-b1e5-b08e51f3a99c
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ASSIGNMENT
+            nodeName: IY
+        join:
+          joinCondition: FROM {{ ref('ASSIGNMENT', 'IY') }} "IY"
+        name: DT_WRK_IY
+        noLinkRefs: []
+  name: DT_WRK_IY
+  overrideSQL: false
+  schema: ""
+  sqlType: new-dynamic:::347
+  type: sql
+  version: 1
+type: Node

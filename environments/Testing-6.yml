@@ -2,8 +2,8 @@ fileVersion: 1
 id: "6"
 mappingDefinitions:
   ASSIGNMENT:
-    database: NAVEENA
-    schema: WORKDEV
+    database: DEV_NAVEENA
+    schema: PUBLIC
   SRC:
     database: SNOWFLAKE_SAMPLE_DATA
     schema: TPCH_SF1
