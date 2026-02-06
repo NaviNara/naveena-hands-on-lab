@@ -502,7 +502,7 @@ operation:
           joinCondition: |-
             FROM {{ ref('ASSIGNMENT', 'STG_LINEITEM') }} "STG_LINEITEM"
             INNER JOIN {{ ref('ASSIGNMENT', 'STG_ORDERS') }} "STG_ORDERS"
-            ON "STG_LINEITEM"./*COLUMN*/ = "STG_ORDERS"./*COLUMN*/
+            ON "STG_LINEITEM"."L_ORDERKEY" = "STG_ORDERS"."O_ORDERKEY"
         name: PSTG_LINEITEM_ORDERS
         noLinkRefs: []
   name: PSTG_LINEITEM_ORDERS
