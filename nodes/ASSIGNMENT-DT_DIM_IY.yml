@@ -233,7 +233,7 @@ operation:
   name: DT_DIM_IY
   overrideSQL: false
   schema: ""
-  sqlType: new-dynamic:::350
+  sqlType: "9"
   type: sql
   version: 1
 type: Node
