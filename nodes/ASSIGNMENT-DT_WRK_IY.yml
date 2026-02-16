@@ -27,6 +27,8 @@ operation:
       items:
         - lagPeriod: Minutes
           lagValue: "60"
+    postSQL: ""
+    preSQL: ""
     refreshWarehouseSize: ""
     refresh_mode: AUTO
     selectDistinct: false
@@ -131,7 +133,7 @@ operation:
   name: DT_WRK_IY
   overrideSQL: false
   schema: ""
-  sqlType: new-dynamic:::347
+  sqlType: "9"
   type: sql
   version: 1
 type: Node
