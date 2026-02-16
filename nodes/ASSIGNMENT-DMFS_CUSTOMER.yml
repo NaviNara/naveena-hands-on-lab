@@ -9,12 +9,15 @@ operation:
         - {}
     addCustomdmfsobject:
       items:
-        - {}
+        - custom_dmfs_object: NULL_COUNT
     addCustomobjectleveldmfs: false
-    addcolumnleveldmfs: false
+    addcolumnleveldmfs: true
     adddmfs:
       items:
-        - {}
+        - columnNameExpressions:
+            columnCounter: 3cb4d940-a4c3-442a-abde-40156028f140
+            stepCounter: 3c64c184-2a18-4703-bdcd-5887007b5214
+          system_dmfs: NULL_COUNT
     adddmfsobject:
       items:
         - {}
