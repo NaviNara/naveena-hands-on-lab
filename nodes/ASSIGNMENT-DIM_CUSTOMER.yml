@@ -3,9 +3,21 @@ id: bc42dccf-f882-43ae-96b3-08cebc289cb5
 name: DIM_CUSTOMER
 operation:
   config:
+    baseLocation: ""
+    externalVolume: ""
+    initialize: ON_CREATE
+    partitionBy:
+      items:
+        - partColName:
+            columnCounter: 468e2b8c-4a93-479a-a111-b08a205df15f
+            stepCounter: bc42dccf-f882-43ae-96b3-08cebc289cb5
     postSQL: ""
     preSQL: ""
+    recordVersioning: Datetime Column
+    refresh_mode: AUTO
     testsEnabled: true
+    tgtLagSpecification: DOWNSTREAM
+    warehouseName: dev_wh_xs
   database: ""
   deployEnabled: true
   description: Customer data as defined by TPC-H
