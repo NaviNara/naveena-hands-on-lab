@@ -3,14 +3,17 @@ id: 3c64c184-2a18-4703-bdcd-5887007b5214
 name: DMFS_CUSTOMER
 operation:
   config:
-    addCustomcolumnleveldmfs: false
+    addCustomcolumnleveldmfs: true
     addCustomdmfs:
       items:
-        - {}
+        - columnCustomNameExpressions:
+            columnCounter: ba74d542-5921-4c47-9376-d9ed4d430a1c
+            stepCounter: 3c64c184-2a18-4703-bdcd-5887007b5214
+          custom_dmfs: NULL_COUNT
     addCustomdmfsobject:
       items:
         - custom_dmfs_object: NULL_COUNT
-    addCustomobjectleveldmfs: false
+    addCustomobjectleveldmfs: true
     addcolumnleveldmfs: true
     adddmfs:
       items:
@@ -20,8 +23,8 @@ operation:
           system_dmfs: NULL_COUNT
     adddmfsobject:
       items:
-        - {}
-    addobjectleveldmfs: false
+        - system_dmfs_object: ROW_COUNT
+    addobjectleveldmfs: true
     scheduleCRON: ""
     schedulePeriod: "60"
     schedulePeriodOption: Minutes
