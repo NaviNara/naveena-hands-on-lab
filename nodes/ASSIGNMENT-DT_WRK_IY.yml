@@ -42,7 +42,7 @@ operation:
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: dynamic table
+  materializationType: view
   metadata:
     appliedNodeTests: []
     columns:
