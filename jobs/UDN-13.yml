@@ -1,6 +1,6 @@
 excludeSelector: ""
 fileVersion: 1
 id: "13"
-includeSelector: "{ location: ASSIGNMENT name: IY } OR { location: ASSIGNMENT name: DT_DIM_IY }"
+includeSelector: "{ location: ASSIGNMENT name: IY } OR { location: ASSIGNMENT name: DT_DIM_IY } OR { location: ASSIGNMENT name: DT_WRK_IY }"
 name: UDN
 type: Job
