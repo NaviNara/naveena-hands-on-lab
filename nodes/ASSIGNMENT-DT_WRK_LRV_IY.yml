@@ -148,7 +148,7 @@ operation:
   name: DT_WRK_LRV_IY
   overrideSQL: false
   schema: ""
-  sqlType: new-dynamic:::351
+  sqlType: "9"
   type: sql
   version: 1
 type: Node
