@@ -68,23 +68,6 @@ operation:
   metadata:
     appliedNodeTests: []
     columns:
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: ccc5778f-0d9f-4dff-b180-1e8f73c652a6
-          stepCounter: fc97235a-d8b7-46d5-8fd7-df2580a4e5eb
-        config: {}
-        dataType: STRING
-        defaultValue: ""
-        description: ""
-        isSurrogateKey: true
-        name: DT_DIM_IY_KEY
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: "{{ dimensionHistoryPk() }}"
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 1efd810a-a66d-455a-aa93-ac0a96e4ff92
