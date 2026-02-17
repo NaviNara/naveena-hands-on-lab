@@ -172,7 +172,7 @@ operation:
   name: DT_DIM_IY
   overrideSQL: false
   schema: ""
-  sqlType: "9"
+  sqlType: Dimension
   type: sql
   version: 1
 type: Node
