@@ -41,6 +41,8 @@ operation:
         - partColName:
             columnCounter: 595ce61e-468a-4cca-86c2-ee4d7c973688
             stepCounter: dffb3957-34e6-46ef-a588-4f6245fdb9e2
+    postSQL: ""
+    preSQL: ""
     recordVersioning: Datetime Column
     recordorderBy:
       items:
@@ -57,7 +59,7 @@ operation:
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: dynamic table
+  materializationType: view
   metadata:
     appliedNodeTests: []
     columns:
