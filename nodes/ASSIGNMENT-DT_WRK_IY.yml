@@ -32,6 +32,7 @@ operation:
     refreshWarehouseSize: ""
     refresh_mode: AUTO
     selectDistinct: false
+    testsEnabled: true
     timeTravel: false
     timeTravelreference: ""
     timeTraveltype: ""
