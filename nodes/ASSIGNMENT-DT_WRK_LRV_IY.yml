@@ -131,23 +131,6 @@ operation:
               - columnCounter: 0f56b4c1-c47d-47d8-850d-c812f46bb8da
                 stepCounter: 5cf55455-0983-4548-b402-4828c48f09fd
             transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 35cceef4-0bbf-4f99-823e-00eb75baff41
-          stepCounter: dffb3957-34e6-46ef-a588-4f6245fdb9e2
-        config: {}
-        dataType: TIMESTAMP
-        defaultValue: ""
-        description: ""
-        name: RECORD_CREATED_DATE
-        nullable: true
-        recordCreated: true
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: FIRST_VALUE({%if config.recordVersioning not in ('Integer Column')%}{{order_by_col()}}{%else%} {{order_by_col_int()}}{%endif%}) OVER (PARTITION BY {{ partition_by() }} ORDER BY {{ order_by_col() }} asc)
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
