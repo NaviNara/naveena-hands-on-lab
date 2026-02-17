@@ -12,7 +12,7 @@ operation:
     clusterKeyConfig:
       items:
         - columnName:
-            columnCounter: ccd3f77a-6b6c-4bbc-99d5-ecf11842ac20
+            columnCounter: 3854dcce-c615-44b9-8fe0-25d869025058
             stepCounter: fc97235a-d8b7-46d5-8fd7-df2580a4e5eb
     clusterKeyConfigExpressions:
       items:
@@ -173,7 +173,7 @@ operation:
   name: DT_DIM_IY
   overrideSQL: false
   schema: ""
-  sqlType: Dimension
+  sqlType: "9"
   type: sql
   version: 1
 type: Node
