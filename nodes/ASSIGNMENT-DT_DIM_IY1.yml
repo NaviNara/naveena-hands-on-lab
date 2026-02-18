@@ -57,7 +57,7 @@ operation:
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: dynamic table
+  materializationType: transient dynamic table
   metadata:
     appliedNodeTests: []
     columns:
