@@ -1,0 +1,154 @@
+fileVersion: 1
+id: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+name: DT_DIM_IY1
+operation:
+  config:
+    advanceWarehouse: false
+    backfill: false
+    backfillSource: ""
+    backfillSourceSchema: ""
+    clusterKey: false
+    clusterKeyConfig:
+      items:
+        - {}
+    clusterKeyConfigExpressions:
+      items:
+        - {}
+    clusterKeyExpressions: false
+    cpygrants: false
+    downstreamOption: false
+    immutabilityConstraint: false
+    immutableExpression: ""
+    initialize: ON_CREATE
+    initializeWarehouseSize: ""
+    lagSpecification:
+      items:
+        - lagPeriod: Minutes
+          lagValue: "60"
+    orderBy:
+      items:
+        - colName:
+            columnCounter: 1debaab8-bfa2-405c-9943-d492cc823f1a
+            stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+    orderByDateTime:
+      items:
+        - {}
+    orderseq:
+      items:
+        - {}
+    partitionBy:
+      items:
+        - partColName:
+            columnCounter: 386de7fd-043d-45b4-8b32-0e56ff60eb17
+            stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+    recordVersioning: Datetime Column
+    recordorderBy:
+      items:
+        - {}
+    refreshWarehouseSize: ""
+    refresh_mode: AUTO
+    timeTravel: false
+    timeTravelreference: ""
+    timeTraveltype: ""
+    timeTravelvalue: ""
+    warehouseName: dev_wh_xs
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ASSIGNMENT
+  materializationType: dynamic table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f8abab39-43b5-4ee0-9163-63fbaad815b0
+          stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: IY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dd5fec3b-4b22-4678-a721-19d8e0d316ab
+                stepCounter: 5cf55455-0983-4548-b402-4828c48f09fd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b5b8273e-a5fb-42f2-8bac-3f1d65063440
+          stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 61d681ab-651c-40e6-aa86-2cc27a5266b5
+                stepCounter: 5cf55455-0983-4548-b402-4828c48f09fd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 386de7fd-043d-45b4-8b32-0e56ff60eb17
+          stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ac161cbb-34ff-4ae6-8d19-b79a3e09152e
+                stepCounter: 5cf55455-0983-4548-b402-4828c48f09fd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 395c2a49-ec9a-47de-a2e8-5b8cb81a6471
+          stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+        config: {}
+        dataType: DATE
+        description: ""
+        name: CREATED_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cfcf753c-8732-43a2-b9b4-07f70801e278
+                stepCounter: 5cf55455-0983-4548-b402-4828c48f09fd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1debaab8-bfa2-405c-9943-d492cc823f1a
+          stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: CREATED_TS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0f56b4c1-c47d-47d8-850d-c812f46bb8da
+                stepCounter: 5cf55455-0983-4548-b402-4828c48f09fd
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          IY: 5cf55455-0983-4548-b402-4828c48f09fd
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ASSIGNMENT
+            nodeName: IY
+        join:
+          joinCondition: FROM {{ ref('ASSIGNMENT', 'IY') }} "IY"
+        name: DT_DIM_IY1
+        noLinkRefs: []
+  name: DT_DIM_IY1
+  overrideSQL: false
+  schema: ""
+  sqlType: "12"
+  type: sql
+  version: 1
+type: Node
