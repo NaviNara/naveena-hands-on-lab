@@ -150,7 +150,7 @@ operation:
   name: DT_DIM_IY1
   overrideSQL: false
   schema: ""
-  sqlType: "10"
+  sqlType: "9"
   type: sql
   version: 1
 type: Node
