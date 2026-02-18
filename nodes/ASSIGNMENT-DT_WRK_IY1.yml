@@ -44,7 +44,7 @@ operation:
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: view
+  materializationType: table
   metadata:
     appliedNodeTests: []
     columns:
