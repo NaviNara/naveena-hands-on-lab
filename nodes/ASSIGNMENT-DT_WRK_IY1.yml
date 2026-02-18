@@ -133,7 +133,7 @@ operation:
   name: DT_WRK_IY1
   overrideSQL: false
   schema: ""
-  sqlType: "11"
+  sqlType: persistentStage
   type: sql
   version: 1
 type: Node
