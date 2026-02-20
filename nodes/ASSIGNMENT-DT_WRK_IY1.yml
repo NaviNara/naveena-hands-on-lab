@@ -18,6 +18,7 @@ operation:
         - {}
     clusterKeyExpressions: false
     cpygrants: false
+    deleteStrategy: NO DELETE
     downstreamOption: false
     groupByAll: false
     immutabilityConstraint: false
@@ -38,13 +39,14 @@ operation:
     timeTravelreference: ""
     timeTraveltype: ""
     timeTravelvalue: ""
+    updateStrategy: INSERT/UPDATE
     warehouseName: dev_wh_xs
   database: ""
   deployEnabled: true
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: transient table
+  materializationType: table
   metadata:
     appliedNodeTests: []
     columns:
