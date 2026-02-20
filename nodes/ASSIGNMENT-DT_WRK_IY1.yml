@@ -7,6 +7,7 @@ operation:
     backfill: false
     backfillSource: ""
     backfillSourceSchema: ""
+    baseLocation: ""
     clusterKey: true
     clusterKeyConfig:
       items:
@@ -20,6 +21,7 @@ operation:
     cpygrants: false
     deleteStrategy: NO DELETE
     downstreamOption: false
+    externalVolume: ""
     groupByAll: false
     immutabilityConstraint: false
     immutableExpression: ""
@@ -34,7 +36,10 @@ operation:
     preSQL: ""
     refreshWarehouseSize: ""
     refresh_mode: AUTO
+    schedulePeriod: "60"
+    schedulePeriodOption: Minutes
     selectDistinct: false
+    tgtLagSpecification: DOWNSTREAM
     timeTravel: false
     timeTravelreference: ""
     timeTraveltype: ""
@@ -138,7 +143,7 @@ operation:
   name: DT_WRK_IY1
   overrideSQL: false
   schema: ""
-  sqlType: persistentStage
+  sqlType: interactive-table:::602
   type: sql
   version: 1
 type: Node
