@@ -11,7 +11,7 @@ operation:
     clusterKeyConfig:
       items:
         - columnName:
-            columnCounter: 76d6602d-22d6-4b0f-a94f-edd86da42efa
+            columnCounter: 7a4047ab-7d58-4103-9f00-8ae5a58bf6db
             stepCounter: da5b04dc-33ce-43b6-a598-1f8ad21d9420
     clusterKeyConfigExpressions:
       items:
@@ -44,7 +44,7 @@ operation:
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: view
+  materializationType: transient table
   metadata:
     appliedNodeTests: []
     columns:
@@ -136,7 +136,7 @@ operation:
   name: DT_WRK_IY1
   overrideSQL: false
   schema: ""
-  sqlType: Fact
+  sqlType: "9"
   type: sql
   version: 1
 type: Node
