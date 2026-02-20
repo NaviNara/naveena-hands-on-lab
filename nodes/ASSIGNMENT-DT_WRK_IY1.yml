@@ -10,7 +10,9 @@ operation:
     clusterKey: true
     clusterKeyConfig:
       items:
-        - columnName: null
+        - columnName:
+            columnCounter: 7a4047ab-7d58-4103-9f00-8ae5a58bf6db
+            stepCounter: da5b04dc-33ce-43b6-a598-1f8ad21d9420
     clusterKeyConfigExpressions:
       items:
         - {}
