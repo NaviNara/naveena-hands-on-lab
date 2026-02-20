@@ -143,7 +143,7 @@ operation:
   name: DT_WRK_IY1
   overrideSQL: false
   schema: ""
-  sqlType: interactive-table:::602
+  sqlType: "11"
   type: sql
   version: 1
 type: Node

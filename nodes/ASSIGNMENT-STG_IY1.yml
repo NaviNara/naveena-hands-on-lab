@@ -1,60 +1,31 @@
 fileVersion: 1
-id: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
-name: DT_DIM_IY1
+id: 597a4989-410f-4f65-9932-b0206fb81a95
+name: STG_IY1
 operation:
   config:
-    advanceWarehouse: false
-    backfill: false
-    backfillSource: ""
-    backfillSourceSchema: ""
-    clusterKey: false
-    clusterKeyConfig:
-      items:
-        - {}
-    clusterKeyConfigExpressions:
-      items:
-        - {}
-    clusterKeyExpressions: false
-    cpygrants: false
-    deleteStrategy: NO DELETE
-    downstreamOption: false
-    immutabilityConstraint: false
-    immutableExpression: ""
     initialize: ON_CREATE
-    initializeWarehouseSize: ""
-    lagSpecification:
-      items:
-        - lagPeriod: Minutes
-          lagValue: "60"
+    insertStrategy: INSERT
     orderBy:
       items:
         - colName:
-            columnCounter: 1debaab8-bfa2-405c-9943-d492cc823f1a
-            stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
-    orderByDateTime:
-      items:
-        - {}
+            columnCounter: 0c265b53-a488-4da6-bf9e-a1ee5bde5582
+            stepCounter: 597a4989-410f-4f65-9932-b0206fb81a95
     orderseq:
       items:
-        - {}
+        - colNameseq:
+            columnCounter: a81ddcde-187d-4e2b-84f7-11b6799b1416
+            stepCounter: 597a4989-410f-4f65-9932-b0206fb81a95
     partitionBy:
       items:
         - partColName:
-            columnCounter: 386de7fd-043d-45b4-8b32-0e56ff60eb17
-            stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+            columnCounter: 2387b090-1f0f-498d-832a-98033abcc958
+            stepCounter: 597a4989-410f-4f65-9932-b0206fb81a95
     postSQL: ""
     preSQL: ""
     recordVersioning: Datetime Column
-    recordorderBy:
-      items:
-        - {}
-    refreshWarehouseSize: ""
     refresh_mode: AUTO
-    timeTravel: false
-    timeTravelreference: ""
-    timeTraveltype: ""
-    timeTravelvalue: ""
-    updateStrategy: MERGE
+    testsEnabled: true
+    truncateBefore: true
     warehouseName: dev_wh_xs
   database: ""
   deployEnabled: true
@@ -67,12 +38,11 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: f8abab39-43b5-4ee0-9163-63fbaad815b0
-          stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+          columnCounter: 29bdee89-f737-464e-8222-df09c551ffe6
+          stepCounter: 597a4989-410f-4f65-9932-b0206fb81a95
         config: {}
         dataType: NUMBER(38,0)
         description: ""
-        isBusinessKey: true
         name: IY_ID
         nullable: true
         sourceColumnReferences:
@@ -82,8 +52,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: b5b8273e-a5fb-42f2-8bac-3f1d65063440
-          stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+          columnCounter: a81ddcde-187d-4e2b-84f7-11b6799b1416
+          stepCounter: 597a4989-410f-4f65-9932-b0206fb81a95
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -96,8 +66,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 386de7fd-043d-45b4-8b32-0e56ff60eb17
-          stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+          columnCounter: 2387b090-1f0f-498d-832a-98033abcc958
+          stepCounter: 597a4989-410f-4f65-9932-b0206fb81a95
         config: {}
         dataType: VARCHAR(100)
         description: ""
@@ -110,8 +80,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 395c2a49-ec9a-47de-a2e8-5b8cb81a6471
-          stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+          columnCounter: a094174f-e6dd-468d-9eb1-7b723af7f22e
+          stepCounter: 597a4989-410f-4f65-9932-b0206fb81a95
         config: {}
         dataType: DATE
         description: ""
@@ -124,8 +94,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 1debaab8-bfa2-405c-9943-d492cc823f1a
-          stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+          columnCounter: 0c265b53-a488-4da6-bf9e-a1ee5bde5582
+          stepCounter: 597a4989-410f-4f65-9932-b0206fb81a95
         config: {}
         dataType: TIMESTAMP_NTZ(9)
         description: ""
@@ -148,9 +118,9 @@ operation:
             nodeName: IY
         join:
           joinCondition: FROM {{ ref('ASSIGNMENT', 'IY') }} "IY"
-        name: DT_DIM_IY1
+        name: STG_IY1
         noLinkRefs: []
-  name: DT_DIM_IY1
+  name: STG_IY1
   overrideSQL: false
   schema: ""
   sqlType: "12"

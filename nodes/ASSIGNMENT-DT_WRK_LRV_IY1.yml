@@ -154,7 +154,7 @@ operation:
   name: DT_WRK_LRV_IY1
   overrideSQL: false
   schema: ""
-  sqlType: interactive-table:::602
+  sqlType: "13"
   type: sql
   version: 1
 type: Node

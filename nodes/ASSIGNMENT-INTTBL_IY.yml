@@ -1,78 +1,43 @@
 fileVersion: 1
-id: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
-name: DT_DIM_IY1
+id: 601115f1-23ca-409e-a75e-444140ac080b
+name: INTTBL_IY
 operation:
   config:
-    advanceWarehouse: false
-    backfill: false
-    backfillSource: ""
-    backfillSourceSchema: ""
-    clusterKey: false
+    autoRefresh: false
+    clusterKey: true
     clusterKeyConfig:
       items:
-        - {}
+        - columnName:
+            columnCounter: c7c0b8f5-cd13-4dfb-93b7-7c8eab1294ba
+            stepCounter: 601115f1-23ca-409e-a75e-444140ac080b
     clusterKeyConfigExpressions:
       items:
         - {}
     clusterKeyExpressions: false
-    cpygrants: false
-    deleteStrategy: NO DELETE
-    downstreamOption: false
-    immutabilityConstraint: false
-    immutableExpression: ""
-    initialize: ON_CREATE
-    initializeWarehouseSize: ""
+    groupByAll: false
+    insertStrategy: UNION ALL
     lagSpecification:
       items:
-        - lagPeriod: Minutes
-          lagValue: "60"
-    orderBy:
-      items:
-        - colName:
-            columnCounter: 1debaab8-bfa2-405c-9943-d492cc823f1a
-            stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
-    orderByDateTime:
-      items:
         - {}
-    orderseq:
-      items:
-        - {}
-    partitionBy:
-      items:
-        - partColName:
-            columnCounter: 386de7fd-043d-45b4-8b32-0e56ff60eb17
-            stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
-    postSQL: ""
-    preSQL: ""
-    recordVersioning: Datetime Column
-    recordorderBy:
-      items:
-        - {}
-    refreshWarehouseSize: ""
-    refresh_mode: AUTO
-    timeTravel: false
-    timeTravelreference: ""
-    timeTraveltype: ""
-    timeTravelvalue: ""
-    updateStrategy: MERGE
+    selectDistinct: false
+    testsEnabled: false
     warehouseName: dev_wh_xs
   database: ""
   deployEnabled: true
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: table
+  materializationType: interactive table
   metadata:
     appliedNodeTests: []
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: f8abab39-43b5-4ee0-9163-63fbaad815b0
-          stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+          columnCounter: 89d2a1da-9854-4b5c-ba64-04c28420d841
+          stepCounter: 601115f1-23ca-409e-a75e-444140ac080b
         config: {}
         dataType: NUMBER(38,0)
         description: ""
-        isBusinessKey: true
         name: IY_ID
         nullable: true
         sourceColumnReferences:
@@ -82,8 +47,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: b5b8273e-a5fb-42f2-8bac-3f1d65063440
-          stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+          columnCounter: b1d1cb0e-7b36-4f29-b069-bb9b39788a66
+          stepCounter: 601115f1-23ca-409e-a75e-444140ac080b
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -96,8 +61,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 386de7fd-043d-45b4-8b32-0e56ff60eb17
-          stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+          columnCounter: c7c0b8f5-cd13-4dfb-93b7-7c8eab1294ba
+          stepCounter: 601115f1-23ca-409e-a75e-444140ac080b
         config: {}
         dataType: VARCHAR(100)
         description: ""
@@ -110,8 +75,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 395c2a49-ec9a-47de-a2e8-5b8cb81a6471
-          stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+          columnCounter: 6d170487-62b5-4e33-a296-8ae141e8a3fe
+          stepCounter: 601115f1-23ca-409e-a75e-444140ac080b
         config: {}
         dataType: DATE
         description: ""
@@ -124,8 +89,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 1debaab8-bfa2-405c-9943-d492cc823f1a
-          stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+          columnCounter: cd018b2c-0928-4596-8d89-ec29a5c24c06
+          stepCounter: 601115f1-23ca-409e-a75e-444140ac080b
         config: {}
         dataType: TIMESTAMP_NTZ(9)
         description: ""
@@ -148,12 +113,12 @@ operation:
             nodeName: IY
         join:
           joinCondition: FROM {{ ref('ASSIGNMENT', 'IY') }} "IY"
-        name: DT_DIM_IY1
+        name: INTTBL_IY
         noLinkRefs: []
-  name: DT_DIM_IY1
+  name: INTTBL_IY
   overrideSQL: false
   schema: ""
-  sqlType: "12"
+  sqlType: interactive-table:::602
   type: sql
   version: 1
 type: Node

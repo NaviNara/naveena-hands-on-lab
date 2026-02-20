@@ -1,61 +1,13 @@
 fileVersion: 1
-id: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
-name: DT_DIM_IY1
+id: 2d07c035-3815-4028-91f1-7ba9abf27704
+name: STG_IY
 operation:
   config:
-    advanceWarehouse: false
-    backfill: false
-    backfillSource: ""
-    backfillSourceSchema: ""
-    clusterKey: false
-    clusterKeyConfig:
-      items:
-        - {}
-    clusterKeyConfigExpressions:
-      items:
-        - {}
-    clusterKeyExpressions: false
-    cpygrants: false
-    deleteStrategy: NO DELETE
-    downstreamOption: false
-    immutabilityConstraint: false
-    immutableExpression: ""
-    initialize: ON_CREATE
-    initializeWarehouseSize: ""
-    lagSpecification:
-      items:
-        - lagPeriod: Minutes
-          lagValue: "60"
-    orderBy:
-      items:
-        - colName:
-            columnCounter: 1debaab8-bfa2-405c-9943-d492cc823f1a
-            stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
-    orderByDateTime:
-      items:
-        - {}
-    orderseq:
-      items:
-        - {}
-    partitionBy:
-      items:
-        - partColName:
-            columnCounter: 386de7fd-043d-45b4-8b32-0e56ff60eb17
-            stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+    insertStrategy: INSERT
     postSQL: ""
     preSQL: ""
-    recordVersioning: Datetime Column
-    recordorderBy:
-      items:
-        - {}
-    refreshWarehouseSize: ""
-    refresh_mode: AUTO
-    timeTravel: false
-    timeTravelreference: ""
-    timeTraveltype: ""
-    timeTravelvalue: ""
-    updateStrategy: MERGE
-    warehouseName: dev_wh_xs
+    testsEnabled: true
+    truncateBefore: true
   database: ""
   deployEnabled: true
   description: ""
@@ -67,12 +19,11 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: f8abab39-43b5-4ee0-9163-63fbaad815b0
-          stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+          columnCounter: b2673743-59e1-4a63-aabd-2f9c6dcfbd21
+          stepCounter: 2d07c035-3815-4028-91f1-7ba9abf27704
         config: {}
         dataType: NUMBER(38,0)
         description: ""
-        isBusinessKey: true
         name: IY_ID
         nullable: true
         sourceColumnReferences:
@@ -82,8 +33,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: b5b8273e-a5fb-42f2-8bac-3f1d65063440
-          stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+          columnCounter: 6e0fbd5e-b6b4-4be0-9b65-8dcebab5a51d
+          stepCounter: 2d07c035-3815-4028-91f1-7ba9abf27704
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -96,8 +47,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 386de7fd-043d-45b4-8b32-0e56ff60eb17
-          stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+          columnCounter: a2410233-e41b-4ba7-8b89-03a469e11236
+          stepCounter: 2d07c035-3815-4028-91f1-7ba9abf27704
         config: {}
         dataType: VARCHAR(100)
         description: ""
@@ -110,8 +61,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 395c2a49-ec9a-47de-a2e8-5b8cb81a6471
-          stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+          columnCounter: df8d99e7-2d04-4386-8b87-c602005e88bd
+          stepCounter: 2d07c035-3815-4028-91f1-7ba9abf27704
         config: {}
         dataType: DATE
         description: ""
@@ -124,8 +75,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 1debaab8-bfa2-405c-9943-d492cc823f1a
-          stepCounter: 7a5be392-ea2c-4ec5-88d5-d73afc54d91f
+          columnCounter: cb12e67b-ef14-40bc-a1b4-8967739c3143
+          stepCounter: 2d07c035-3815-4028-91f1-7ba9abf27704
         config: {}
         dataType: TIMESTAMP_NTZ(9)
         description: ""
@@ -148,12 +99,12 @@ operation:
             nodeName: IY
         join:
           joinCondition: FROM {{ ref('ASSIGNMENT', 'IY') }} "IY"
-        name: DT_DIM_IY1
+        name: STG_IY
         noLinkRefs: []
-  name: DT_DIM_IY1
+  name: STG_IY
   overrideSQL: false
   schema: ""
-  sqlType: "12"
+  sqlType: "11"
   type: sql
   version: 1
 type: Node
