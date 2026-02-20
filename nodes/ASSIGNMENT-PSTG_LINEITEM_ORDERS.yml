@@ -508,7 +508,7 @@ operation:
   name: PSTG_LINEITEM_ORDERS
   overrideSQL: false
   schema: ""
-  sqlType: persistentStage
+  sqlType: "12"
   type: sql
   version: 1
 type: Node

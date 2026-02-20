@@ -1,29 +1,50 @@
 fileVersion: 1
-id: 601115f1-23ca-409e-a75e-444140ac080b
-name: INTTBL_IY
+id: f8952d4c-0f58-4983-bcd0-b447ce40a3c9
+name: DT_WRK_IY2
 operation:
   config:
-    autoRefresh: false
-    clusterKey: true
+    advanceWarehouse: false
+    backfill: false
+    backfillSource: ""
+    backfillSourceSchema: ""
+    clusterKey: false
     clusterKeyConfig:
       items:
-        - columnName:
-            columnCounter: c7c0b8f5-cd13-4dfb-93b7-7c8eab1294ba
-            stepCounter: 601115f1-23ca-409e-a75e-444140ac080b
+        - {}
     clusterKeyConfigExpressions:
       items:
         - {}
     clusterKeyExpressions: false
+    cpygrants: false
+    downstreamOption: false
     groupByAll: false
+    immutabilityConstraint: false
+    immutableExpression: ""
     initialize: ON_CREATE
+    initializeWarehouseSize: ""
     insertStrategy: UNION ALL
     lagSpecification:
       items:
         - lagPeriod: Minutes
           lagValue: "60"
+    orderBy:
+      items:
+        - colName:
+            columnCounter: b3906373-f287-4270-84ca-669d848a22c0
+            stepCounter: f8952d4c-0f58-4983-bcd0-b447ce40a3c9
+    partitionBy:
+      items:
+        - partColName:
+            columnCounter: 6a037259-5852-4279-9915-c9e5aa2107a1
+            stepCounter: f8952d4c-0f58-4983-bcd0-b447ce40a3c9
+    recordVersioning: Datetime Column
+    refreshWarehouseSize: ""
     refresh_mode: AUTO
     selectDistinct: false
-    testsEnabled: false
+    timeTravel: false
+    timeTravelreference: ""
+    timeTraveltype: ""
+    timeTravelvalue: ""
     warehouseName: dev_wh_xs
   database: ""
   deployEnabled: true
@@ -36,8 +57,8 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 89d2a1da-9854-4b5c-ba64-04c28420d841
-          stepCounter: 601115f1-23ca-409e-a75e-444140ac080b
+          columnCounter: c07d80e8-267a-4575-b56e-0b5bbb340a89
+          stepCounter: f8952d4c-0f58-4983-bcd0-b447ce40a3c9
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -50,8 +71,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: b1d1cb0e-7b36-4f29-b069-bb9b39788a66
-          stepCounter: 601115f1-23ca-409e-a75e-444140ac080b
+          columnCounter: ea642d94-5e70-462e-8ebe-9e258805eb71
+          stepCounter: f8952d4c-0f58-4983-bcd0-b447ce40a3c9
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -64,8 +85,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: c7c0b8f5-cd13-4dfb-93b7-7c8eab1294ba
-          stepCounter: 601115f1-23ca-409e-a75e-444140ac080b
+          columnCounter: 6a037259-5852-4279-9915-c9e5aa2107a1
+          stepCounter: f8952d4c-0f58-4983-bcd0-b447ce40a3c9
         config: {}
         dataType: VARCHAR(100)
         description: ""
@@ -78,8 +99,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 6d170487-62b5-4e33-a296-8ae141e8a3fe
-          stepCounter: 601115f1-23ca-409e-a75e-444140ac080b
+          columnCounter: 4e6351f3-a474-4584-9031-15569b3fc767
+          stepCounter: f8952d4c-0f58-4983-bcd0-b447ce40a3c9
         config: {}
         dataType: DATE
         description: ""
@@ -92,8 +113,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: cd018b2c-0928-4596-8d89-ec29a5c24c06
-          stepCounter: 601115f1-23ca-409e-a75e-444140ac080b
+          columnCounter: b3906373-f287-4270-84ca-669d848a22c0
+          stepCounter: f8952d4c-0f58-4983-bcd0-b447ce40a3c9
         config: {}
         dataType: TIMESTAMP_NTZ(9)
         description: ""
@@ -116,12 +137,12 @@ operation:
             nodeName: IY
         join:
           joinCondition: FROM {{ ref('ASSIGNMENT', 'IY') }} "IY"
-        name: INTTBL_IY
+        name: DT_WRK_IY2
         noLinkRefs: []
-  name: INTTBL_IY
+  name: DT_WRK_IY2
   overrideSQL: false
   schema: ""
-  sqlType: interactive-table:::602
+  sqlType: "12"
   type: sql
   version: 1
 type: Node
