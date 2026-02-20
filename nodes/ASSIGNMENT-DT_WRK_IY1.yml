@@ -136,7 +136,7 @@ operation:
   name: DT_WRK_IY1
   overrideSQL: false
   schema: ""
-  sqlType: "9"
+  sqlType: "11"
   type: sql
   version: 1
 type: Node
