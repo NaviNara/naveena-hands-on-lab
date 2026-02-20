@@ -41,6 +41,8 @@ operation:
         - partColName:
             columnCounter: e0887103-9247-494e-b2ca-942b440545c6
             stepCounter: 37a73d89-78f3-49eb-9848-ecc19be96b8d
+    postSQL: ""
+    preSQL: ""
     recordVersioning: Datetime Column
     recordorderBy:
       items:
@@ -148,7 +150,7 @@ operation:
   name: DT_WRK_LRV_IY1
   overrideSQL: false
   schema: ""
-  sqlType: "9"
+  sqlType: Fact
   type: sql
   version: 1
 type: Node
