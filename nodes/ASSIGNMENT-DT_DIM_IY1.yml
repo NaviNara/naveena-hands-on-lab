@@ -16,6 +16,7 @@ operation:
         - {}
     clusterKeyExpressions: false
     cpygrants: false
+    deleteStrategy: NO DELETE
     downstreamOption: false
     immutabilityConstraint: false
     immutableExpression: ""
@@ -152,7 +153,7 @@ operation:
   name: DT_DIM_IY1
   overrideSQL: false
   schema: ""
-  sqlType: base-node-types-advanced-deploy:::388
+  sqlType: persistentStage
   type: sql
   version: 1
 type: Node
