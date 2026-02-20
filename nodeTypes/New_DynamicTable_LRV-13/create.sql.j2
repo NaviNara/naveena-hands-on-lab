@@ -124,7 +124,7 @@ does not permit copying or modification for any other purpose.
                 {% set nsVariables.storageLocationTest = false %}
              {% endif %}
 
-        ## Config
+       {# Config #}
 		{% set partitionByTest = currentState.config.partitionBy == desiredState.config.partitionBy %}
         {% set orderByTest = currentState.config.orderBy == desiredState.config.orderBy %}
         {% set orderByDateTimeTest = currentState.config.orderByDateTime == desiredState.config.orderByDateTime %}
