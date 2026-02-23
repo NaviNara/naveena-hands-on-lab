@@ -3,10 +3,12 @@ id: bce7e8b6-b3e0-48b4-bec5-5ad4604c5a56
 name: TSKWRK_IY1
 operation:
   config:
-    clusterKey: false
+    clusterKey: true
     clusterKeyConfig:
       items:
-        - {}
+        - columnName:
+            columnCounter: 2e9059c1-2975-4fa9-9c06-0ab30779a99f
+            stepCounter: bce7e8b6-b3e0-48b4-bec5-5ad4604c5a56
     clusterKeyConfigExpressions:
       items:
         - {}
@@ -139,7 +141,7 @@ operation:
   name: TSKWRK_IY1
   overrideSQL: false
   schema: ""
-  sqlType: Data-Quality:::416
+  sqlType: interactive-table:::602
   type: sql
   version: 1
 type: Node
