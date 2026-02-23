@@ -3,6 +3,28 @@ id: bce7e8b6-b3e0-48b4-bec5-5ad4604c5a56
 name: TSKWRK_IY1
 operation:
   config:
+    addCustomcolumnleveldmfs: true
+    addCustomdmfs:
+      items:
+        - columnCustomNameExpressions:
+            columnCounter: 2e9059c1-2975-4fa9-9c06-0ab30779a99f
+            stepCounter: bce7e8b6-b3e0-48b4-bec5-5ad4604c5a56
+          custom_dmfs: DMF_PA_VALID_DTS_CHK
+    addCustomdmfsobject:
+      items:
+        - custom_dmfs_object: MISSING_SCENARIO_SNAPSHOT_CHECK
+    addCustomobjectleveldmfs: true
+    addcolumnleveldmfs: true
+    adddmfs:
+      items:
+        - columnNameExpressions:
+            columnCounter: e26ad69e-66d6-4a9e-8d89-ff41c67e2b19
+            stepCounter: bce7e8b6-b3e0-48b4-bec5-5ad4604c5a56
+          system_dmfs: MAX
+    adddmfsobject:
+      items:
+        - system_dmfs_object: ROW_COUNT
+    addobjectleveldmfs: true
     clusterKey: true
     clusterKeyConfig:
       items:
@@ -36,6 +58,7 @@ operation:
     selectDistinct: false
     serverlessSize: MEDIUM
     truncateBefore: true
+    updateStrategy: MERGE
     whName: <WAREHOUSE_NAME>
   database: ""
   deployEnabled: true
@@ -56,6 +79,7 @@ operation:
           valStandardDeviation: true
         dataType: NUMBER(38,0)
         description: ""
+        isBusinessKey: true
         name: IY_ID
         nullable: true
         sourceColumnReferences:
@@ -143,7 +167,7 @@ operation:
   name: TSKWRK_IY1
   overrideSQL: false
   schema: ""
-  sqlType: "9"
+  sqlType: base-node-types-advanced-deploy:::388
   type: sql
   version: 1
 type: Node
