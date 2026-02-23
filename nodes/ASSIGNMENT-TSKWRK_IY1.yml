@@ -22,7 +22,7 @@ operation:
         - {}
     predTask: DATA_TRANSFORMATION_ROOT_TASK
     rootTask: DATA_TRANSFORMATION_ROOT_TASK
-    sampleMode: Sample
+    sampleMode: Full Table
     sampleOption: Fixed Row
     sampleRows: "1000"
     scheduleCRON: 5 0-23 * * * America/Los_Angeles
@@ -64,6 +64,7 @@ operation:
           columnCounter: e26ad69e-66d6-4a9e-8d89-ff41c67e2b19
           stepCounter: bce7e8b6-b3e0-48b4-bec5-5ad4604c5a56
         config:
+          isDistinctCount: true
           isMinMetric: true
           valMinLen: true
         dataType: NUMBER(38,0)
