@@ -1,6 +1,0 @@
-excludeSelector: ""
-fileVersion: 1
-id: "14"
-includeSelector: "{ location: ASSIGNMENT name: IY } OR { location: ASSIGNMENT name: DT_WRK_IY1 } OR { location: ASSIGNMENT name: DT_DIM_IY1 } OR { location: ASSIGNMENT name: DT_WRK_LRV_IY }"
-name: UDN1
-type: Job
