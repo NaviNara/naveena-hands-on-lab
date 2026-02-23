@@ -19,7 +19,9 @@ operation:
     clusterKeyExpressions: false
     colpreview:
       items:
-        - columnName: null
+        - columnName:
+            columnCounter: 40cd687a-0bd9-477a-844d-266a715f08b6
+            stepCounter: cd003a87-ef59-4b83-9557-67315936a47f
     createcortex: true
     devMode: true
     embmodel: snowflake-arctic-embed-m-v1.5
