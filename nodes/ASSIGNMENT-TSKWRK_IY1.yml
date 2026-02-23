@@ -22,6 +22,8 @@ operation:
     orderbycolumn:
       items:
         - {}
+    postSQL: ""
+    preSQL: ""
     predTask: DATA_TRANSFORMATION_ROOT_TASK
     rootTask: DATA_TRANSFORMATION_ROOT_TASK
     sampleMode: Full Table
@@ -141,7 +143,7 @@ operation:
   name: TSKWRK_IY1
   overrideSQL: false
   schema: ""
-  sqlType: interactive-table:::602
+  sqlType: "9"
   type: sql
   version: 1
 type: Node
