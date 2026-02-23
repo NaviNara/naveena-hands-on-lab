@@ -3,7 +3,7 @@ id: cd003a87-ef59-4b83-9557-67315936a47f
 name: TSKWRK_IY3
 operation:
   config:
-    allcol: true
+    allcol: false
     attrcol:
       items:
         - acolname:
@@ -19,14 +19,12 @@ operation:
     clusterKeyExpressions: false
     colpreview:
       items:
-        - columnName:
-            columnCounter: 40cd687a-0bd9-477a-844d-266a715f08b6
-            stepCounter: cd003a87-ef59-4b83-9557-67315936a47f
+        - columnName: null
     createcortex: true
     devMode: true
     embmodel: snowflake-arctic-embed-m-v1.5
-    excss: true
-    filtoggle: true
+    excss: false
+    filtoggle: false
     flagSrcStream: true
     groupByAll: false
     initialize: ON_CREATE
@@ -38,7 +36,7 @@ operation:
     locCSS: ""
     multiStreamBehavior: AND
     namCSS: ""
-    numboost: true
+    numboost: false
     orderby: false
     orderbycolumn:
       items:
@@ -56,7 +54,7 @@ operation:
       stepCounter: cd003a87-ef59-4b83-9557-67315936a47f
     selectDistinct: false
     serverlessSize: MEDIUM
-    timdec: true
+    timdec: false
     truncateBefore: true
     warehouseName: dev_wh_xs
     whName: <WAREHOUSE_NAME>
