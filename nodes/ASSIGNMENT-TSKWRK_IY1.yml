@@ -22,6 +22,9 @@ operation:
         - {}
     predTask: DATA_TRANSFORMATION_ROOT_TASK
     rootTask: DATA_TRANSFORMATION_ROOT_TASK
+    sampleMode: Sample
+    sampleOption: Fixed Row
+    sampleRows: "1000"
     scheduleCRON: 5 0-23 * * * America/Los_Angeles
     schedulePeriod: "60"
     schedulePeriodOption: Minutes
@@ -43,7 +46,10 @@ operation:
         columnReference:
           columnCounter: eab027c5-5f18-43c3-87f3-4c7574f076d3
           stepCounter: bce7e8b6-b3e0-48b4-bec5-5ad4604c5a56
-        config: {}
+        config:
+          isMaxMetric: true
+          isNullCount: true
+          valStandardDeviation: true
         dataType: NUMBER(38,0)
         description: ""
         name: IY_ID
@@ -57,7 +63,9 @@ operation:
         columnReference:
           columnCounter: e26ad69e-66d6-4a9e-8d89-ff41c67e2b19
           stepCounter: bce7e8b6-b3e0-48b4-bec5-5ad4604c5a56
-        config: {}
+        config:
+          isMinMetric: true
+          valMinLen: true
         dataType: NUMBER(38,0)
         description: ""
         name: ID
@@ -71,7 +79,11 @@ operation:
         columnReference:
           columnCounter: 2e9059c1-2975-4fa9-9c06-0ab30779a99f
           stepCounter: bce7e8b6-b3e0-48b4-bec5-5ad4604c5a56
-        config: {}
+        config:
+          isAvgMetric: true
+          isNotNullCount: true
+          valDist: true
+          valMaxLen: true
         dataType: VARCHAR(100)
         description: ""
         name: NAME
@@ -126,7 +138,7 @@ operation:
   name: TSKWRK_IY1
   overrideSQL: false
   schema: ""
-  sqlType: "14"
+  sqlType: Data-Quality:::416
   type: sql
   version: 1
 type: Node
