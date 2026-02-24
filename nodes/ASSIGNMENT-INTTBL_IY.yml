@@ -20,7 +20,7 @@ operation:
     insertStrategy: UNION ALL
     lagSpecification:
       items:
-        - {}
+        - lagPeriod: Minutes
     orderBy:
       items:
         - colName:

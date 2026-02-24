@@ -6,13 +6,26 @@ operation:
     clusterKey: true
     clusterKeyConfig:
       items:
-        - {}
+        - columnName:
+            columnCounter: a56c7949-e2ee-43e8-badb-b977187bb682
+            stepCounter: 7d2fd8f6-1c54-4d5a-b6e8-0dc1092883e3
     clusterKeyConfigExpressions:
       items:
         - {}
     clusterKeyExpressions: false
     downstreamOption: true
     initialize: ON_CREATE
+    orderBy:
+      items:
+        - colName:
+            columnCounter: 23c655d4-eb9a-4adf-85b1-dbd61bf5c0a5
+            stepCounter: 7d2fd8f6-1c54-4d5a-b6e8-0dc1092883e3
+    partitionBy:
+      items:
+        - partColName:
+            columnCounter: a56c7949-e2ee-43e8-badb-b977187bb682
+            stepCounter: 7d2fd8f6-1c54-4d5a-b6e8-0dc1092883e3
+    recordVersioning: Datetime Column
     refresh_mode: AUTO
     secureOption: false
     selectDistinct: false
