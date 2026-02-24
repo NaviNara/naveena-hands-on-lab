@@ -3,6 +3,28 @@ id: 5130eac3-a6ba-4645-a16e-d93114bd1e8f
 name: TSKWRK_IY2
 operation:
   config:
+    addCustomcolumnleveldmfs: true
+    addCustomdmfs:
+      items:
+        - columnCustomNameExpressions:
+            columnCounter: f058fa26-3b3f-4b3c-911e-b8f6f7b0b986
+            stepCounter: 5130eac3-a6ba-4645-a16e-d93114bd1e8f
+          custom_dmfs: DMF_PA_VALID_DTS_CHK
+    addCustomdmfsobject:
+      items:
+        - custom_dmfs_object: MISSING_SCENARIO_SNAPSHOT_CHECK
+    addCustomobjectleveldmfs: true
+    addcolumnleveldmfs: true
+    adddmfs:
+      items:
+        - columnNameExpressions:
+            columnCounter: f058fa26-3b3f-4b3c-911e-b8f6f7b0b986
+            stepCounter: 5130eac3-a6ba-4645-a16e-d93114bd1e8f
+          system_dmfs: AVG
+    adddmfsobject:
+      items:
+        - system_dmfs_object: ROW_COUNT
+    addobjectleveldmfs: true
     clusterKey: false
     clusterKeyConfig:
       items:
@@ -14,6 +36,7 @@ operation:
     devMode: true
     flagSrcStream: true
     groupByAll: false
+    initialize: ON_CREATE
     insertStrategy: UNION
     multiStreamBehavior: AND
     orderby: false
@@ -21,6 +44,7 @@ operation:
       items:
         - {}
     predTask: DATA_TRANSFORMATION_ROOT_TASK
+    refresh_mode: AUTO
     rootTask: DATA_TRANSFORMATION_ROOT_TASK
     scheduleCRON: 5 0-23 * * * America/Los_Angeles
     schedulePeriod: "60"
@@ -29,6 +53,7 @@ operation:
     selectDistinct: false
     serverlessSize: MEDIUM
     truncateBefore: true
+    warehouseName: dev_wh_xs
     whName: <WAREHOUSE_NAME>
   database: ""
   deployEnabled: true
@@ -126,7 +151,7 @@ operation:
   name: TSKWRK_IY2
   overrideSQL: false
   schema: ""
-  sqlType: Data-Quality:::448
+  sqlType: "11"
   type: sql
   version: 1
 type: Node
