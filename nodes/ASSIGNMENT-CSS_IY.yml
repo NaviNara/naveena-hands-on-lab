@@ -1,26 +1,17 @@
 fileVersion: 1
-id: 296b3b31-d13b-4db5-a19c-94e1febb5740
+id: caf7afe7-dcc3-4536-a37a-1b86c9200941
 name: CSS_IY
 operation:
   config:
     allcol: false
     attrcol:
       items:
-        - acolname:
-            columnCounter: 4319dad5-8856-497c-99f0-4e312bc8b61c
-            stepCounter: 296b3b31-d13b-4db5-a19c-94e1febb5740
-    clusterKey: true
-    clusterKeyConfig:
-      items:
-        - columnName:
-            columnCounter: 4319dad5-8856-497c-99f0-4e312bc8b61c
-            stepCounter: 296b3b31-d13b-4db5-a19c-94e1febb5740
+        - {}
     colpreview:
       items:
-        - columnName: null
-    createcortex: true
-    downstreamOption: true
-    embmodel: snowflake-arctic-embed-m-v1.5
+        - {}
+    createcortex: false
+    embmodel: ""
     excss: false
     filcrit:
       items:
@@ -29,8 +20,7 @@ operation:
     initialize: ON_CREATE
     lagSpecification:
       items:
-        - lagPeriod: Minutes
-          lagValue: "60"
+        - {}
     locCSS: ""
     lopt: and
     mulfilcon: false
@@ -41,10 +31,6 @@ operation:
         - {}
     query1: ""
     querycortex: false
-    refresh_mode: AUTO
-    searchcol:
-      columnCounter: 61884639-3896-47f3-9789-2f01d9b456b9
-      stepCounter: 296b3b31-d13b-4db5-a19c-94e1febb5740
     timdec: false
     timedecay:
       items:
@@ -55,14 +41,14 @@ operation:
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: dynamic table
+  materializationType: cortex search service
   metadata:
     appliedNodeTests: []
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 41428b4c-4249-4c71-9165-27838d3313ac
-          stepCounter: 296b3b31-d13b-4db5-a19c-94e1febb5740
+          columnCounter: b8151311-4285-486f-adeb-fcb016510e67
+          stepCounter: caf7afe7-dcc3-4536-a37a-1b86c9200941
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -75,8 +61,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 4319dad5-8856-497c-99f0-4e312bc8b61c
-          stepCounter: 296b3b31-d13b-4db5-a19c-94e1febb5740
+          columnCounter: 7b0817d2-951f-4964-b54a-7509822fc74d
+          stepCounter: caf7afe7-dcc3-4536-a37a-1b86c9200941
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -89,8 +75,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 61884639-3896-47f3-9789-2f01d9b456b9
-          stepCounter: 296b3b31-d13b-4db5-a19c-94e1febb5740
+          columnCounter: 698ec6de-6174-4cda-84d0-48dccce54acd
+          stepCounter: caf7afe7-dcc3-4536-a37a-1b86c9200941
         config: {}
         dataType: VARCHAR(100)
         description: ""
@@ -103,8 +89,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 14be711c-72ef-41b2-9f1c-65a219bb66a3
-          stepCounter: 296b3b31-d13b-4db5-a19c-94e1febb5740
+          columnCounter: bf8fc472-a595-4688-aa95-566f3cdef0ef
+          stepCounter: caf7afe7-dcc3-4536-a37a-1b86c9200941
         config: {}
         dataType: DATE
         description: ""
@@ -117,8 +103,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: d0ee7c38-5fb1-4033-9b30-828ee783f676
-          stepCounter: 296b3b31-d13b-4db5-a19c-94e1febb5740
+          columnCounter: 4b7f9d0a-6d8a-4d00-8860-4588b86abb9d
+          stepCounter: caf7afe7-dcc3-4536-a37a-1b86c9200941
         config: {}
         dataType: TIMESTAMP_NTZ(9)
         description: ""
@@ -146,7 +132,7 @@ operation:
   name: CSS_IY
   overrideSQL: false
   schema: ""
-  sqlType: "11"
+  sqlType: cortex:::499
   type: sql
   version: 1
 type: Node
