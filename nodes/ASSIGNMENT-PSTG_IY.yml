@@ -1,0 +1,181 @@
+fileVersion: 1
+id: 7ecf84ae-5195-4752-b5a5-60be2a5aec0d
+name: PSTG_IY
+operation:
+  config:
+    clusterKey: true
+    clusterKeyConfig:
+      items:
+        - columnName:
+            columnCounter: b9707526-641d-443b-bde2-378c0603a20b
+            stepCounter: 7ecf84ae-5195-4752-b5a5-60be2a5aec0d
+    downstreamOption: true
+    initialize: ON_CREATE
+    orderBy:
+      items:
+        - colName:
+            columnCounter: f8aa3bfe-701e-4ef2-a9d5-417cc6b3d4b8
+            stepCounter: 7ecf84ae-5195-4752-b5a5-60be2a5aec0d
+    partitionBy:
+      items:
+        - partColName:
+            columnCounter: b9707526-641d-443b-bde2-378c0603a20b
+            stepCounter: 7ecf84ae-5195-4752-b5a5-60be2a5aec0d
+    postSQL: ""
+    preSQL: ""
+    recordVersioning: Datetime Column
+    refresh_mode: AUTO
+    testsEnabled: true
+    warehouseName: dev_wh_xs
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ASSIGNMENT
+  materializationType: dynamic table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e2861806-c572-46b0-9644-6df7233254d7
+          stepCounter: 7ecf84ae-5195-4752-b5a5-60be2a5aec0d
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSurrogateKey: true
+        name: PSTG_IY_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: da6c591a-8fa1-4896-ae8f-4174e952cd58
+          stepCounter: 7ecf84ae-5195-4752-b5a5-60be2a5aec0d
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        isBusinessKey: true
+        name: IY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b487eba6-879c-4147-80e9-f8c5ca1c251d
+                stepCounter: 3537f07d-4fdb-43a7-8892-41a02611dcf9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3a2b2463-6bf8-4e6c-80a2-967677735337
+          stepCounter: 7ecf84ae-5195-4752-b5a5-60be2a5aec0d
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f29e8629-d41b-467c-9095-863f86d330e8
+                stepCounter: 3537f07d-4fdb-43a7-8892-41a02611dcf9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b9707526-641d-443b-bde2-378c0603a20b
+          stepCounter: 7ecf84ae-5195-4752-b5a5-60be2a5aec0d
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 15ff32c5-bc7f-4410-9ca6-d33e78e4dca2
+                stepCounter: 3537f07d-4fdb-43a7-8892-41a02611dcf9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8a35f256-7257-4cc7-b077-1d89d3d3794f
+          stepCounter: 7ecf84ae-5195-4752-b5a5-60be2a5aec0d
+        config: {}
+        dataType: DATE
+        description: ""
+        name: CREATED_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 78f11f02-cb94-4e6b-a140-2ab05f303482
+                stepCounter: 3537f07d-4fdb-43a7-8892-41a02611dcf9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f8aa3bfe-701e-4ef2-a9d5-417cc6b3d4b8
+          stepCounter: 7ecf84ae-5195-4752-b5a5-60be2a5aec0d
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: CREATED_TS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c3d8f7db-5d81-4d4a-9825-d108af4cf7cb
+                stepCounter: 3537f07d-4fdb-43a7-8892-41a02611dcf9
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7490d7a6-d264-46c1-bdb8-689c5aceddc4
+          stepCounter: 7ecf84ae-5195-4752-b5a5-60be2a5aec0d
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSystemVersion: true
+        name: SYSTEM_VERSION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a6a6d11e-b895-48d8-ada4-e4ed37fde784
+          stepCounter: 7ecf84ae-5195-4752-b5a5-60be2a5aec0d
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        isSystemCurrentFlag: true
+        name: SYSTEM_CURRENT_FLAG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          IY: 3537f07d-4fdb-43a7-8892-41a02611dcf9
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ASSIGNMENT
+            nodeName: IY
+        join:
+          joinCondition: FROM {{ ref('ASSIGNMENT', 'IY') }} "IY"
+        name: PSTG_IY
+        noLinkRefs: []
+  name: PSTG_IY
+  overrideSQL: false
+  schema: ""
+  sqlType: "13"
+  type: sql
+  version: 1
+type: Node
