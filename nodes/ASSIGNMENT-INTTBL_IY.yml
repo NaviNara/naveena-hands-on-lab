@@ -1,0 +1,139 @@
+fileVersion: 1
+id: 08a9461c-cc0e-40d4-b629-971d1931ad8c
+name: INTTBL_IY
+operation:
+  config:
+    autoRefresh: false
+    clusterKey: true
+    clusterKeyConfig:
+      items:
+        - columnName:
+            columnCounter: f9c653f2-0f8d-4003-b3b8-5d3319f3e8c3
+            stepCounter: 08a9461c-cc0e-40d4-b629-971d1931ad8c
+    clusterKeyConfigExpressions:
+      items:
+        - {}
+    clusterKeyExpressions: false
+    downstreamOption: true
+    groupByAll: false
+    initialize: ON_CREATE
+    insertStrategy: UNION ALL
+    lagSpecification:
+      items:
+        - lagPeriod: Minutes
+          lagValue: "60"
+    orderBy:
+      items:
+        - colName:
+            columnCounter: 3647efe6-d516-4362-be7f-65dd6c19ecca
+            stepCounter: 08a9461c-cc0e-40d4-b629-971d1931ad8c
+    partitionBy:
+      items:
+        - partColName:
+            columnCounter: f9c653f2-0f8d-4003-b3b8-5d3319f3e8c3
+            stepCounter: 08a9461c-cc0e-40d4-b629-971d1931ad8c
+    recordVersioning: Datetime Column
+    refresh_mode: AUTO
+    selectDistinct: false
+    testsEnabled: false
+    warehouseName: dev_wh_xs
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ASSIGNMENT
+  materializationType: dynamic table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 31578778-3c39-46d9-a289-6f7cc211c9ef
+          stepCounter: 08a9461c-cc0e-40d4-b629-971d1931ad8c
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: IY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b487eba6-879c-4147-80e9-f8c5ca1c251d
+                stepCounter: 3537f07d-4fdb-43a7-8892-41a02611dcf9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f8c37ecb-a0b5-4363-899b-75b9b71df44b
+          stepCounter: 08a9461c-cc0e-40d4-b629-971d1931ad8c
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f29e8629-d41b-467c-9095-863f86d330e8
+                stepCounter: 3537f07d-4fdb-43a7-8892-41a02611dcf9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f9c653f2-0f8d-4003-b3b8-5d3319f3e8c3
+          stepCounter: 08a9461c-cc0e-40d4-b629-971d1931ad8c
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 15ff32c5-bc7f-4410-9ca6-d33e78e4dca2
+                stepCounter: 3537f07d-4fdb-43a7-8892-41a02611dcf9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ca4ed6e0-f4af-4512-8f33-7467495d7676
+          stepCounter: 08a9461c-cc0e-40d4-b629-971d1931ad8c
+        config: {}
+        dataType: DATE
+        description: ""
+        name: CREATED_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 78f11f02-cb94-4e6b-a140-2ab05f303482
+                stepCounter: 3537f07d-4fdb-43a7-8892-41a02611dcf9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3647efe6-d516-4362-be7f-65dd6c19ecca
+          stepCounter: 08a9461c-cc0e-40d4-b629-971d1931ad8c
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: CREATED_TS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c3d8f7db-5d81-4d4a-9825-d108af4cf7cb
+                stepCounter: 3537f07d-4fdb-43a7-8892-41a02611dcf9
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          IY: 3537f07d-4fdb-43a7-8892-41a02611dcf9
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ASSIGNMENT
+            nodeName: IY
+        join:
+          joinCondition: FROM {{ ref('ASSIGNMENT', 'IY') }} "IY"
+        name: INTTBL_IY
+        noLinkRefs: []
+  name: INTTBL_IY
+  overrideSQL: false
+  schema: ""
+  sqlType: "13"
+  type: sql
+  version: 1
+type: Node
