@@ -1,51 +1,45 @@
 fileVersion: 1
-id: 5102f23e-4936-409a-acfe-a6e47d075b04
-name: TSKWRK_IY
+id: c7fe0618-5452-48ec-960b-9c571742fc56
+name: PSTG_IY
 operation:
   config:
-    clusterKey: false
-    clusterKeyConfig:
-      items:
-        - {}
-    clusterKeyConfigExpressions:
-      items:
-        - {}
-    clusterKeyExpressions: false
-    devMode: true
-    flagSrcStream: true
-    groupByAll: false
-    insertStrategy: UNION
-    multiStreamBehavior: AND
-    orderby: false
-    orderbycolumn:
-      items:
-        - {}
-    predTask: DATA_TRANSFORMATION_ROOT_TASK
-    rootTask: DATA_TRANSFORMATION_ROOT_TASK
-    scheduleCRON: 5 0-23 * * * America/Los_Angeles
-    schedulePeriod: "60"
-    schedulePeriodOption: Minutes
-    schedulingMode: Warehouse Task
-    selectDistinct: false
-    serverlessSize: MEDIUM
-    truncateBefore: true
-    whName: <WAREHOUSE_NAME>
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
   database: ""
   deployEnabled: true
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: task
+  materializationType: table
   metadata:
     appliedNodeTests: []
     columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 947e10f7-0896-4637-803b-f47786d9e788
+          stepCounter: c7fe0618-5452-48ec-960b-9c571742fc56
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSurrogateKey: true
+        name: PSTG_IY_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 083a86d8-b63e-4e99-90a6-22b001b3411a
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
+          columnCounter: 69dc4567-3373-41e1-807e-a90b700dbba1
+          stepCounter: c7fe0618-5452-48ec-960b-9c571742fc56
         config: {}
         dataType: NUMBER(38,0)
         description: ""
+        isBusinessKey: true
         name: IY_ID
         nullable: true
         sourceColumnReferences:
@@ -55,8 +49,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: c97d5b5d-afda-458c-b033-0c1d0229c2e2
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
+          columnCounter: 5346232c-3097-4020-a5a9-5ec80a450b61
+          stepCounter: c7fe0618-5452-48ec-960b-9c571742fc56
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -69,8 +63,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 197073cb-8e01-4551-a8c9-4b5d0522c1c9
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
+          columnCounter: 62d41adc-7e69-4a8b-9432-f876270bfd62
+          stepCounter: c7fe0618-5452-48ec-960b-9c571742fc56
         config: {}
         dataType: VARCHAR(100)
         description: ""
@@ -83,8 +77,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: f57206a7-4aad-4078-bc1a-c6c7cd17490a
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
+          columnCounter: f76cdecb-593f-48b0-9ec7-7eb56b1cc491
+          stepCounter: c7fe0618-5452-48ec-960b-9c571742fc56
         config: {}
         dataType: DATE
         description: ""
@@ -97,8 +91,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 52fb999b-e60b-435f-8cbf-dd159b671c6f
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
+          columnCounter: 59756d2b-e288-4cc7-80b6-bb6b74ddfe6b
+          stepCounter: c7fe0618-5452-48ec-960b-9c571742fc56
         config: {}
         dataType: TIMESTAMP_NTZ(9)
         description: ""
@@ -108,6 +102,40 @@ operation:
           - columnReferences:
               - columnCounter: 53994dcd-1738-48c4-b57b-67fcdc5caf56
                 stepCounter: 751890de-7db9-4449-9175-87b1502df8b7
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9ab1512d-bd74-4779-bd0a-1d469d316b66
+          stepCounter: c7fe0618-5452-48ec-960b-9c571742fc56
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSystemVersion: true
+        name: SYSTEM_VERSION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 361b527e-8327-4dfe-a681-ca1dadb1bfe3
+          stepCounter: c7fe0618-5452-48ec-960b-9c571742fc56
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        isSystemCurrentFlag: true
+        name: SYSTEM_CURRENT_FLAG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
             transform: ""
     cteString: ""
     enabledColumnTestIDs: []
@@ -121,12 +149,12 @@ operation:
             nodeName: IY
         join:
           joinCondition: FROM {{ ref('ASSIGNMENT', 'IY') }} "IY"
-        name: TSKWRK_IY
+        name: PSTG_IY
         noLinkRefs: []
-  name: TSKWRK_IY
+  name: PSTG_IY
   overrideSQL: false
   schema: ""
-  sqlType: "14"
+  sqlType: persistentStage
   type: sql
   version: 1
 type: Node

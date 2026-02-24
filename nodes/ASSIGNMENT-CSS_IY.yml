@@ -1,48 +1,60 @@
 fileVersion: 1
-id: 5102f23e-4936-409a-acfe-a6e47d075b04
-name: TSKWRK_IY
+id: 296b3b31-d13b-4db5-a19c-94e1febb5740
+name: CSS_IY
 operation:
   config:
-    clusterKey: false
-    clusterKeyConfig:
+    allcol: false
+    attrcol:
+      items:
+        - acolname:
+            columnCounter: 4319dad5-8856-497c-99f0-4e312bc8b61c
+            stepCounter: 296b3b31-d13b-4db5-a19c-94e1febb5740
+    colpreview:
+      items:
+        - columnName: null
+    createcortex: true
+    embmodel: snowflake-arctic-embed-m-v1.5
+    excss: false
+    filcrit:
       items:
         - {}
-    clusterKeyConfigExpressions:
+    filtoggle: false
+    initialize: ON_CREATE
+    lagSpecification:
+      items:
+        - lagPeriod: Minutes
+          lagValue: "60"
+    locCSS: ""
+    lopt: and
+    mulfilcon: false
+    namCSS: ""
+    numboost: false
+    numericboost:
       items:
         - {}
-    clusterKeyExpressions: false
-    devMode: true
-    flagSrcStream: true
-    groupByAll: false
-    insertStrategy: UNION
-    multiStreamBehavior: AND
-    orderby: false
-    orderbycolumn:
+    query1: ""
+    querycortex: false
+    searchcol:
+      columnCounter: 61884639-3896-47f3-9789-2f01d9b456b9
+      stepCounter: 296b3b31-d13b-4db5-a19c-94e1febb5740
+    timdec: false
+    timedecay:
       items:
         - {}
-    predTask: DATA_TRANSFORMATION_ROOT_TASK
-    rootTask: DATA_TRANSFORMATION_ROOT_TASK
-    scheduleCRON: 5 0-23 * * * America/Los_Angeles
-    schedulePeriod: "60"
-    schedulePeriodOption: Minutes
-    schedulingMode: Warehouse Task
-    selectDistinct: false
-    serverlessSize: MEDIUM
-    truncateBefore: true
-    whName: <WAREHOUSE_NAME>
+    warehouseName: dev_wh_xs
   database: ""
   deployEnabled: true
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: task
+  materializationType: cortex search service
   metadata:
     appliedNodeTests: []
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 083a86d8-b63e-4e99-90a6-22b001b3411a
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
+          columnCounter: 41428b4c-4249-4c71-9165-27838d3313ac
+          stepCounter: 296b3b31-d13b-4db5-a19c-94e1febb5740
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -55,8 +67,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: c97d5b5d-afda-458c-b033-0c1d0229c2e2
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
+          columnCounter: 4319dad5-8856-497c-99f0-4e312bc8b61c
+          stepCounter: 296b3b31-d13b-4db5-a19c-94e1febb5740
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -69,8 +81,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 197073cb-8e01-4551-a8c9-4b5d0522c1c9
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
+          columnCounter: 61884639-3896-47f3-9789-2f01d9b456b9
+          stepCounter: 296b3b31-d13b-4db5-a19c-94e1febb5740
         config: {}
         dataType: VARCHAR(100)
         description: ""
@@ -83,8 +95,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: f57206a7-4aad-4078-bc1a-c6c7cd17490a
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
+          columnCounter: 14be711c-72ef-41b2-9f1c-65a219bb66a3
+          stepCounter: 296b3b31-d13b-4db5-a19c-94e1febb5740
         config: {}
         dataType: DATE
         description: ""
@@ -97,8 +109,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 52fb999b-e60b-435f-8cbf-dd159b671c6f
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
+          columnCounter: d0ee7c38-5fb1-4033-9b30-828ee783f676
+          stepCounter: 296b3b31-d13b-4db5-a19c-94e1febb5740
         config: {}
         dataType: TIMESTAMP_NTZ(9)
         description: ""
@@ -121,12 +133,12 @@ operation:
             nodeName: IY
         join:
           joinCondition: FROM {{ ref('ASSIGNMENT', 'IY') }} "IY"
-        name: TSKWRK_IY
+        name: CSS_IY
         noLinkRefs: []
-  name: TSKWRK_IY
+  name: CSS_IY
   overrideSQL: false
   schema: ""
-  sqlType: "14"
+  sqlType: cortex:::499
   type: sql
   version: 1
 type: Node

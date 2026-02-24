@@ -1,8 +1,15 @@
 fileVersion: 1
-id: 5102f23e-4936-409a-acfe-a6e47d075b04
-name: TSKWRK_IY
+id: 53198b09-3a9c-4987-b2fc-8eb08275a5b9
+name: WRK_IY
 operation:
   config:
+    asofColumn:
+      items:
+        - {}
+    asofJoin: true
+    asofJoinMain: false
+    asofJoinON: false
+    asofJoinUSING: false
     clusterKey: false
     clusterKeyConfig:
       items:
@@ -11,38 +18,30 @@ operation:
       items:
         - {}
     clusterKeyExpressions: false
-    devMode: true
-    flagSrcStream: true
     groupByAll: false
-    insertStrategy: UNION
-    multiStreamBehavior: AND
+    insertStrategy: INSERT
     orderby: false
     orderbycolumn:
       items:
         - {}
-    predTask: DATA_TRANSFORMATION_ROOT_TASK
-    rootTask: DATA_TRANSFORMATION_ROOT_TASK
-    scheduleCRON: 5 0-23 * * * America/Los_Angeles
-    schedulePeriod: "60"
-    schedulePeriodOption: Minutes
-    schedulingMode: Warehouse Task
+    postSQL: ""
+    preSQL: ""
     selectDistinct: false
-    serverlessSize: MEDIUM
+    testsEnabled: false
     truncateBefore: true
-    whName: <WAREHOUSE_NAME>
   database: ""
   deployEnabled: true
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: task
+  materializationType: table
   metadata:
     appliedNodeTests: []
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 083a86d8-b63e-4e99-90a6-22b001b3411a
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
+          columnCounter: e6a8f9e4-9421-4bdf-94e6-368ff1c297e5
+          stepCounter: 53198b09-3a9c-4987-b2fc-8eb08275a5b9
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -55,8 +54,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: c97d5b5d-afda-458c-b033-0c1d0229c2e2
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
+          columnCounter: 573fb86a-63c4-4005-b5f3-08d46de20e0e
+          stepCounter: 53198b09-3a9c-4987-b2fc-8eb08275a5b9
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -69,8 +68,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 197073cb-8e01-4551-a8c9-4b5d0522c1c9
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
+          columnCounter: a40e31ed-6a4d-4927-a82b-ab8e8275db41
+          stepCounter: 53198b09-3a9c-4987-b2fc-8eb08275a5b9
         config: {}
         dataType: VARCHAR(100)
         description: ""
@@ -83,8 +82,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: f57206a7-4aad-4078-bc1a-c6c7cd17490a
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
+          columnCounter: 60df866b-2c0e-445c-8e71-4070a834f56f
+          stepCounter: 53198b09-3a9c-4987-b2fc-8eb08275a5b9
         config: {}
         dataType: DATE
         description: ""
@@ -97,8 +96,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 52fb999b-e60b-435f-8cbf-dd159b671c6f
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
+          columnCounter: 5870149b-cbda-404f-b0c8-c78833a1ae50
+          stepCounter: 53198b09-3a9c-4987-b2fc-8eb08275a5b9
         config: {}
         dataType: TIMESTAMP_NTZ(9)
         description: ""
@@ -120,13 +119,13 @@ operation:
           - locationName: ASSIGNMENT
             nodeName: IY
         join:
-          joinCondition: FROM {{ ref('ASSIGNMENT', 'IY') }} "IY"
-        name: TSKWRK_IY
+          joinCondition: FROM  {{ ref('ASSIGNMENT', 'IY') }} IY
+        name: WRK_IY
         noLinkRefs: []
-  name: TSKWRK_IY
+  name: WRK_IY
   overrideSQL: false
   schema: ""
-  sqlType: "14"
+  sqlType: "9"
   type: sql
   version: 1
 type: Node

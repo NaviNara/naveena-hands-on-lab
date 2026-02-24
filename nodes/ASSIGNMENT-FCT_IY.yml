@@ -1,51 +1,28 @@
 fileVersion: 1
-id: 5102f23e-4936-409a-acfe-a6e47d075b04
-name: TSKWRK_IY
+id: 348e9b06-477e-411a-9ec8-88a845f358ab
+name: FCT_IY
 operation:
   config:
-    clusterKey: false
-    clusterKeyConfig:
-      items:
-        - {}
-    clusterKeyConfigExpressions:
-      items:
-        - {}
-    clusterKeyExpressions: false
-    devMode: true
-    flagSrcStream: true
-    groupByAll: false
-    insertStrategy: UNION
-    multiStreamBehavior: AND
-    orderby: false
-    orderbycolumn:
-      items:
-        - {}
-    predTask: DATA_TRANSFORMATION_ROOT_TASK
-    rootTask: DATA_TRANSFORMATION_ROOT_TASK
-    scheduleCRON: 5 0-23 * * * America/Los_Angeles
-    schedulePeriod: "60"
-    schedulePeriodOption: Minutes
-    schedulingMode: Warehouse Task
-    selectDistinct: false
-    serverlessSize: MEDIUM
-    truncateBefore: true
-    whName: <WAREHOUSE_NAME>
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
   database: ""
   deployEnabled: true
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: task
+  materializationType: table
   metadata:
     appliedNodeTests: []
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 083a86d8-b63e-4e99-90a6-22b001b3411a
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
+          columnCounter: 4022749f-2c73-4660-9965-592eab48bf4a
+          stepCounter: 348e9b06-477e-411a-9ec8-88a845f358ab
         config: {}
         dataType: NUMBER(38,0)
         description: ""
+        isBusinessKey: true
         name: IY_ID
         nullable: true
         sourceColumnReferences:
@@ -55,8 +32,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: c97d5b5d-afda-458c-b033-0c1d0229c2e2
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
+          columnCounter: 3251d681-2ae3-4df0-ba1b-0c4845f50b84
+          stepCounter: 348e9b06-477e-411a-9ec8-88a845f358ab
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -69,8 +46,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 197073cb-8e01-4551-a8c9-4b5d0522c1c9
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
+          columnCounter: 39f2a3ec-a0f5-4f51-8809-a6bad903a351
+          stepCounter: 348e9b06-477e-411a-9ec8-88a845f358ab
         config: {}
         dataType: VARCHAR(100)
         description: ""
@@ -83,8 +60,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: f57206a7-4aad-4078-bc1a-c6c7cd17490a
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
+          columnCounter: 66b52f46-59ea-429e-9c29-93f505d1a1bd
+          stepCounter: 348e9b06-477e-411a-9ec8-88a845f358ab
         config: {}
         dataType: DATE
         description: ""
@@ -97,8 +74,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 52fb999b-e60b-435f-8cbf-dd159b671c6f
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
+          columnCounter: be2cdf29-75b4-4ac5-a4df-849fd646b363
+          stepCounter: 348e9b06-477e-411a-9ec8-88a845f358ab
         config: {}
         dataType: TIMESTAMP_NTZ(9)
         description: ""
@@ -109,6 +86,40 @@ operation:
               - columnCounter: 53994dcd-1738-48c4-b57b-67fcdc5caf56
                 stepCounter: 751890de-7db9-4449-9175-87b1502df8b7
             transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 82ba45ae-1f2f-43bb-bb88-d95c878e2ce1
+          stepCounter: 348e9b06-477e-411a-9ec8-88a845f358ab
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e6a8c952-3a20-4922-b385-34cf29bcfe1b
+          stepCounter: 348e9b06-477e-411a-9ec8-88a845f358ab
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
@@ -121,12 +132,12 @@ operation:
             nodeName: IY
         join:
           joinCondition: FROM {{ ref('ASSIGNMENT', 'IY') }} "IY"
-        name: TSKWRK_IY
+        name: FCT_IY
         noLinkRefs: []
-  name: TSKWRK_IY
+  name: FCT_IY
   overrideSQL: false
   schema: ""
-  sqlType: "14"
+  sqlType: Fact
   type: sql
   version: 1
 type: Node

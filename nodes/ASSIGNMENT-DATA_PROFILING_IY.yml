@@ -1,33 +1,24 @@
 fileVersion: 1
-id: 5102f23e-4936-409a-acfe-a6e47d075b04
-name: TSKWRK_IY
+id: fa48a637-78d9-4bf7-acdc-b64092be8a72
+name: DATA_PROFILING_IY
 operation:
   config:
-    clusterKey: false
-    clusterKeyConfig:
-      items:
-        - {}
-    clusterKeyConfigExpressions:
-      items:
-        - {}
-    clusterKeyExpressions: false
-    devMode: true
     flagSrcStream: true
-    groupByAll: false
-    insertStrategy: UNION
+    isRowCount: false
     multiStreamBehavior: AND
-    orderby: false
-    orderbycolumn:
-      items:
-        - {}
     predTask: DATA_TRANSFORMATION_ROOT_TASK
     rootTask: DATA_TRANSFORMATION_ROOT_TASK
+    sampleMode: Sample
+    sampleOption: Fixed Row
+    samplePercent: "10"
+    sampleRows: "1000"
     scheduleCRON: 5 0-23 * * * America/Los_Angeles
     schedulePeriod: "60"
-    schedulePeriodOption: Minutes
+    schedulePeriodOption: Predecessor
     schedulingMode: Warehouse Task
-    selectDistinct: false
     serverlessSize: MEDIUM
+    taskSchedule: false
+    testsEnabled: false
     truncateBefore: true
     whName: <WAREHOUSE_NAME>
   database: ""
@@ -41,9 +32,11 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 083a86d8-b63e-4e99-90a6-22b001b3411a
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
-        config: {}
+          columnCounter: 8597f6fa-d9fd-4452-8257-c1663ff70454
+          stepCounter: fa48a637-78d9-4bf7-acdc-b64092be8a72
+        config:
+          isMinMetric: true
+          isNullCount: true
         dataType: NUMBER(38,0)
         description: ""
         name: IY_ID
@@ -55,9 +48,11 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: c97d5b5d-afda-458c-b033-0c1d0229c2e2
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
-        config: {}
+          columnCounter: a3b90145-2cbe-4c25-8879-e00830838126
+          stepCounter: fa48a637-78d9-4bf7-acdc-b64092be8a72
+        config:
+          isAvgMetric: true
+          isDistinctCount: true
         dataType: NUMBER(38,0)
         description: ""
         name: ID
@@ -69,9 +64,11 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 197073cb-8e01-4551-a8c9-4b5d0522c1c9
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
-        config: {}
+          columnCounter: d746c589-b5d8-40ea-9f09-2353e978a04f
+          stepCounter: fa48a637-78d9-4bf7-acdc-b64092be8a72
+        config:
+          isMaxMetric: true
+          isNotNullCount: true
         dataType: VARCHAR(100)
         description: ""
         name: NAME
@@ -83,8 +80,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: f57206a7-4aad-4078-bc1a-c6c7cd17490a
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
+          columnCounter: 14ed1746-ef69-4542-8f12-289dc1f71767
+          stepCounter: fa48a637-78d9-4bf7-acdc-b64092be8a72
         config: {}
         dataType: DATE
         description: ""
@@ -97,8 +94,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 52fb999b-e60b-435f-8cbf-dd159b671c6f
-          stepCounter: 5102f23e-4936-409a-acfe-a6e47d075b04
+          columnCounter: 7b905e5c-91ec-4af6-b5b1-0040e05ad872
+          stepCounter: fa48a637-78d9-4bf7-acdc-b64092be8a72
         config: {}
         dataType: TIMESTAMP_NTZ(9)
         description: ""
@@ -109,6 +106,23 @@ operation:
               - columnCounter: 53994dcd-1738-48c4-b57b-67fcdc5caf56
                 stepCounter: 751890de-7db9-4449-9175-87b1502df8b7
             transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f43859dd-bae0-4f94-bc89-1e95882e94b6
+          stepCounter: fa48a637-78d9-4bf7-acdc-b64092be8a72
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: PROFILE_METRIC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "NULL"
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
@@ -121,12 +135,12 @@ operation:
             nodeName: IY
         join:
           joinCondition: FROM {{ ref('ASSIGNMENT', 'IY') }} "IY"
-        name: TSKWRK_IY
+        name: DATA_PROFILING_IY
         noLinkRefs: []
-  name: TSKWRK_IY
+  name: DATA_PROFILING_IY
   overrideSQL: false
   schema: ""
-  sqlType: "14"
+  sqlType: Data-Quality:::416
   type: sql
   version: 1
 type: Node
