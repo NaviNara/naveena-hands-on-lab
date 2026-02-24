@@ -1,0 +1,131 @@
+fileVersion: 1
+id: ec14a365-2b77-48dd-b782-c19f8cc7a596
+name: WRK_IY
+operation:
+  config:
+    asofColumn:
+      items:
+        - {}
+    asofJoin: true
+    asofJoinMain: false
+    asofJoinON: false
+    asofJoinUSING: false
+    clusterKey: false
+    clusterKeyConfig:
+      items:
+        - {}
+    clusterKeyConfigExpressions:
+      items:
+        - {}
+    clusterKeyExpressions: false
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ASSIGNMENT
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 16fe0177-83e8-419f-9c5a-25a1f004cd81
+          stepCounter: ec14a365-2b77-48dd-b782-c19f8cc7a596
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: IY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5d3ee769-94ae-490f-bb1e-3a1bed34c6b6
+                stepCounter: d1e9e625-6bcb-4072-b67d-a83ae8ed4eb3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d759febc-43f2-4967-ab3a-908e4fc33e7d
+          stepCounter: ec14a365-2b77-48dd-b782-c19f8cc7a596
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 40e1a47b-6948-4fa6-8a1c-6c509b9e62b2
+                stepCounter: d1e9e625-6bcb-4072-b67d-a83ae8ed4eb3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 39357d40-484c-4940-b63d-f2d89a75a841
+          stepCounter: ec14a365-2b77-48dd-b782-c19f8cc7a596
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ca7a982f-e3b8-409d-88ed-99eb2a360080
+                stepCounter: d1e9e625-6bcb-4072-b67d-a83ae8ed4eb3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d8b45b3a-a4d7-43d5-bc9a-d17b334dbb50
+          stepCounter: ec14a365-2b77-48dd-b782-c19f8cc7a596
+        config: {}
+        dataType: DATE
+        description: ""
+        name: CREATED_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6c443187-f4a4-4867-8ec8-1981c90770dc
+                stepCounter: d1e9e625-6bcb-4072-b67d-a83ae8ed4eb3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b0b45e9a-ff3a-4df8-ae3e-be86ead3ec37
+          stepCounter: ec14a365-2b77-48dd-b782-c19f8cc7a596
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: CREATED_TS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: edbd83df-4268-4a02-9736-237b3fc6d1dc
+                stepCounter: d1e9e625-6bcb-4072-b67d-a83ae8ed4eb3
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          IY: d1e9e625-6bcb-4072-b67d-a83ae8ed4eb3
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ASSIGNMENT
+            nodeName: IY
+        join:
+          joinCondition: FROM  {{ ref('ASSIGNMENT', 'IY') }} IY
+        name: WRK_IY
+        noLinkRefs: []
+  name: WRK_IY
+  overrideSQL: false
+  schema: ""
+  sqlType: "9"
+  type: sql
+  version: 1
+type: Node
