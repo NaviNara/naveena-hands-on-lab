@@ -1,5 +1,5 @@
 fileVersion: 1
-id: d1e9e625-6bcb-4072-b67d-a83ae8ed4eb3
+id: f9836de4-b806-4ca4-b2f5-b5d60d8ad2b1
 name: IY
 operation:
   database: ""
@@ -13,8 +13,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 5d3ee769-94ae-490f-bb1e-3a1bed34c6b6
-          stepCounter: d1e9e625-6bcb-4072-b67d-a83ae8ed4eb3
+          columnCounter: d43cf7c5-7515-4ebb-947e-75bef14bd610
+          stepCounter: f9836de4-b806-4ca4-b2f5-b5d60d8ad2b1
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -32,8 +32,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 40e1a47b-6948-4fa6-8a1c-6c509b9e62b2
-          stepCounter: d1e9e625-6bcb-4072-b67d-a83ae8ed4eb3
+          columnCounter: 6ea98d5b-4a19-49a5-a632-394f5e7a3c5e
+          stepCounter: f9836de4-b806-4ca4-b2f5-b5d60d8ad2b1
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -51,8 +51,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: ca7a982f-e3b8-409d-88ed-99eb2a360080
-          stepCounter: d1e9e625-6bcb-4072-b67d-a83ae8ed4eb3
+          columnCounter: a6255180-6544-4e14-9157-34ce09c25ea9
+          stepCounter: f9836de4-b806-4ca4-b2f5-b5d60d8ad2b1
         config: {}
         dataType: VARCHAR(100)
         defaultValue: ""
@@ -70,8 +70,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 6c443187-f4a4-4867-8ec8-1981c90770dc
-          stepCounter: d1e9e625-6bcb-4072-b67d-a83ae8ed4eb3
+          columnCounter: bb34962f-4695-4fdd-a61c-12248cc179a1
+          stepCounter: f9836de4-b806-4ca4-b2f5-b5d60d8ad2b1
         config: {}
         dataType: DATE
         defaultValue: ""
@@ -89,8 +89,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: edbd83df-4268-4a02-9736-237b3fc6d1dc
-          stepCounter: d1e9e625-6bcb-4072-b67d-a83ae8ed4eb3
+          columnCounter: b3a65487-4997-4625-9175-d85f6878cf95
+          stepCounter: f9836de4-b806-4ca4-b2f5-b5d60d8ad2b1
         config: {}
         dataType: TIMESTAMP_NTZ(9)
         defaultValue: ""
