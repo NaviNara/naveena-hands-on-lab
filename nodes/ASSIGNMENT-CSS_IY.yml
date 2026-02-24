@@ -9,10 +9,17 @@ operation:
         - acolname:
             columnCounter: 4319dad5-8856-497c-99f0-4e312bc8b61c
             stepCounter: 296b3b31-d13b-4db5-a19c-94e1febb5740
+    clusterKey: true
+    clusterKeyConfig:
+      items:
+        - columnName:
+            columnCounter: 61884639-3896-47f3-9789-2f01d9b456b9
+            stepCounter: 296b3b31-d13b-4db5-a19c-94e1febb5740
     colpreview:
       items:
         - columnName: null
     createcortex: true
+    downstreamOption: true
     embmodel: snowflake-arctic-embed-m-v1.5
     excss: false
     filcrit:
@@ -34,6 +41,7 @@ operation:
         - {}
     query1: ""
     querycortex: false
+    refresh_mode: AUTO
     searchcol:
       columnCounter: 61884639-3896-47f3-9789-2f01d9b456b9
       stepCounter: 296b3b31-d13b-4db5-a19c-94e1febb5740
@@ -47,7 +55,7 @@ operation:
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: cortex search service
+  materializationType: dynamic table
   metadata:
     appliedNodeTests: []
     columns:
@@ -138,7 +146,7 @@ operation:
   name: CSS_IY
   overrideSQL: false
   schema: ""
-  sqlType: cortex:::499
+  sqlType: "11"
   type: sql
   version: 1
 type: Node

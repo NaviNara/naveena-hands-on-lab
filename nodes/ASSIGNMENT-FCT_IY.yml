@@ -3,15 +3,29 @@ id: 348e9b06-477e-411a-9ec8-88a845f358ab
 name: FCT_IY
 operation:
   config:
+    clusterKey: true
+    clusterKeyConfig:
+      items:
+        - columnName:
+            columnCounter: 39f2a3ec-a0f5-4f51-8809-a6bad903a351
+            stepCounter: 348e9b06-477e-411a-9ec8-88a845f358ab
+    downstreamOption: true
+    initialize: ON_CREATE
+    lagSpecification:
+      items:
+        - lagPeriod: Minutes
+          lagValue: "60"
     postSQL: ""
     preSQL: ""
+    refresh_mode: AUTO
     testsEnabled: true
+    warehouseName: dev_wh_xs
   database: ""
   deployEnabled: true
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: table
+  materializationType: dynamic table
   metadata:
     appliedNodeTests: []
     columns:
@@ -137,7 +151,7 @@ operation:
   name: FCT_IY
   overrideSQL: false
   schema: ""
-  sqlType: Fact
+  sqlType: "11"
   type: sql
   version: 1
 type: Node

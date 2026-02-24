@@ -3,15 +3,29 @@ id: c7fe0618-5452-48ec-960b-9c571742fc56
 name: PSTG_IY
 operation:
   config:
+    clusterKey: true
+    clusterKeyConfig:
+      items:
+        - columnName:
+            columnCounter: 62d41adc-7e69-4a8b-9432-f876270bfd62
+            stepCounter: c7fe0618-5452-48ec-960b-9c571742fc56
+    downstreamOption: true
+    initialize: ON_CREATE
+    lagSpecification:
+      items:
+        - lagPeriod: Minutes
+          lagValue: "60"
     postSQL: ""
     preSQL: ""
+    refresh_mode: AUTO
     testsEnabled: true
+    warehouseName: dev_wh_xs
   database: ""
   deployEnabled: true
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: table
+  materializationType: dynamic table
   metadata:
     appliedNodeTests: []
     columns:
@@ -154,7 +168,7 @@ operation:
   name: PSTG_IY
   overrideSQL: false
   schema: ""
-  sqlType: persistentStage
+  sqlType: "11"
   type: sql
   version: 1
 type: Node

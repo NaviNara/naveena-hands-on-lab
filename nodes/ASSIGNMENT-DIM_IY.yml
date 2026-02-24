@@ -3,15 +3,25 @@ id: 9420e473-1427-4f69-b6d2-72f32c9c0d86
 name: DIM_IY
 operation:
   config:
+    clusterKey: true
+    clusterKeyConfig:
+      items:
+        - columnName:
+            columnCounter: 808c4757-835c-44b1-8d44-fc11edd55297
+            stepCounter: 9420e473-1427-4f69-b6d2-72f32c9c0d86
+    downstreamOption: true
+    initialize: ON_CREATE
     postSQL: ""
     preSQL: ""
+    refresh_mode: AUTO
     testsEnabled: true
+    warehouseName: dev_wh_xs
   database: ""
   deployEnabled: true
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: table
+  materializationType: dynamic table
   metadata:
     appliedNodeTests: []
     columns:
@@ -154,7 +164,7 @@ operation:
   name: DIM_IY
   overrideSQL: false
   schema: ""
-  sqlType: Dimension
+  sqlType: "11"
   type: sql
   version: 1
 type: Node

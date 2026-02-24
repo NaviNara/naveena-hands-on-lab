@@ -14,11 +14,15 @@ operation:
       items:
         - {}
     clusterKeyExpressions: false
+    downstreamOption: true
     groupByAll: false
+    initialize: ON_CREATE
     insertStrategy: UNION ALL
     lagSpecification:
       items:
-        - {}
+        - lagPeriod: Minutes
+          lagValue: "60"
+    refresh_mode: AUTO
     selectDistinct: false
     testsEnabled: false
     warehouseName: dev_wh_xs
@@ -27,7 +31,7 @@ operation:
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: interactive table
+  materializationType: dynamic table
   metadata:
     appliedNodeTests: []
     columns:
@@ -118,7 +122,7 @@ operation:
   name: INTTBL_IY
   overrideSQL: false
   schema: ""
-  sqlType: interactive-table:::602
+  sqlType: "11"
   type: sql
   version: 1
 type: Node

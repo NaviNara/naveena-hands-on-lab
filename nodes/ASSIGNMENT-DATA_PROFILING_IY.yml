@@ -3,10 +3,23 @@ id: fa48a637-78d9-4bf7-acdc-b64092be8a72
 name: DATA_PROFILING_IY
 operation:
   config:
+    clusterKey: true
+    clusterKeyConfig:
+      items:
+        - columnName:
+            columnCounter: d746c589-b5d8-40ea-9f09-2353e978a04f
+            stepCounter: fa48a637-78d9-4bf7-acdc-b64092be8a72
+    downstreamOption: true
     flagSrcStream: true
+    initialize: ON_CREATE
     isRowCount: false
+    lagSpecification:
+      items:
+        - lagPeriod: Minutes
+          lagValue: "60"
     multiStreamBehavior: AND
     predTask: DATA_TRANSFORMATION_ROOT_TASK
+    refresh_mode: AUTO
     rootTask: DATA_TRANSFORMATION_ROOT_TASK
     sampleMode: Sample
     sampleOption: Fixed Row
@@ -20,13 +33,14 @@ operation:
     taskSchedule: false
     testsEnabled: false
     truncateBefore: true
+    warehouseName: dev_wh_xs
     whName: <WAREHOUSE_NAME>
   database: ""
   deployEnabled: true
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: task
+  materializationType: dynamic table
   metadata:
     appliedNodeTests: []
     columns:
@@ -140,7 +154,7 @@ operation:
   name: DATA_PROFILING_IY
   overrideSQL: false
   schema: ""
-  sqlType: Data-Quality:::416
+  sqlType: "11"
   type: sql
   version: 1
 type: Node

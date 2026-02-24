@@ -3,21 +3,29 @@ id: 2f224d98-34d4-463a-9ce7-b86552f970fa
 name: FCT_IY1
 operation:
   config:
-    clusterKey: false
+    clusterKey: true
     clusterKeyConfig:
       items:
-        - {}
+        - columnName:
+            columnCounter: 0712bdca-4914-4c5b-8d38-a02d4781a154
+            stepCounter: 2f224d98-34d4-463a-9ce7-b86552f970fa
     clusterKeyConfigExpressions:
       items:
         - {}
     clusterKeyExpressions: false
     deleteStrategy: NO DELETE
+    downstreamOption: true
     excludeMergeList:
       items:
         - {}
     excludeMergeToggle: false
     groupByAll: false
+    initialize: ON_CREATE
     insertStrategy: UNION ALL
+    lagSpecification:
+      items:
+        - lagPeriod: Minutes
+          lagValue: "60"
     lastModifiedComparison: false
     orderby: false
     orderbycolumn:
@@ -30,16 +38,18 @@ operation:
       items:
         - {}
     primaryKeyName: ""
+    refresh_mode: AUTO
     selectDistinct: false
     testsEnabled: false
     treatNullAsCurrentTimestamp: false
     truncateBefore: false
+    warehouseName: dev_wh_xs
   database: ""
   deployEnabled: true
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: table
+  materializationType: dynamic table
   metadata:
     appliedNodeTests: []
     columns:
@@ -131,7 +141,7 @@ operation:
   name: FCT_IY1
   overrideSQL: false
   schema: ""
-  sqlType: base-node-types-advanced-deploy:::389
+  sqlType: "11"
   type: sql
   version: 1
 type: Node

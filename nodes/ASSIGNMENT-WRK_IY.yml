@@ -10,15 +10,19 @@ operation:
     asofJoinMain: false
     asofJoinON: false
     asofJoinUSING: false
-    clusterKey: false
+    clusterKey: true
     clusterKeyConfig:
       items:
-        - {}
+        - columnName:
+            columnCounter: a40e31ed-6a4d-4927-a82b-ab8e8275db41
+            stepCounter: 53198b09-3a9c-4987-b2fc-8eb08275a5b9
     clusterKeyConfigExpressions:
       items:
         - {}
     clusterKeyExpressions: false
+    downstreamOption: true
     groupByAll: false
+    initialize: ON_CREATE
     insertStrategy: INSERT
     orderby: false
     orderbycolumn:
@@ -26,15 +30,17 @@ operation:
         - {}
     postSQL: ""
     preSQL: ""
+    refresh_mode: AUTO
     selectDistinct: false
     testsEnabled: false
     truncateBefore: true
+    warehouseName: dev_wh_xs
   database: ""
   deployEnabled: true
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: table
+  materializationType: dynamic table
   metadata:
     appliedNodeTests: []
     columns:
@@ -125,7 +131,7 @@ operation:
   name: WRK_IY
   overrideSQL: false
   schema: ""
-  sqlType: "9"
+  sqlType: "11"
   type: sql
   version: 1
 type: Node

@@ -3,10 +3,12 @@ id: ed04cfec-e71e-444c-bdaa-427e88cc3df8
 name: DIM_IY1
 operation:
   config:
-    clusterKey: false
+    clusterKey: true
     clusterKeyConfig:
       items:
-        - {}
+        - columnName:
+            columnCounter: 26a7b647-ce01-46c9-a2c6-abd367df3629
+            stepCounter: ed04cfec-e71e-444c-bdaa-427e88cc3df8
     clusterKeyConfigExpressions:
       items:
         - {}
@@ -15,11 +17,13 @@ operation:
       items:
         - {}
     deleteStrategy: NO DELETE
+    downstreamOption: true
     excludeMergeList:
       items:
         - {}
     excludeMergeToggle: false
     groupByAll: false
+    initialize: ON_CREATE
     insertStrategy: UNION ALL
     insertZeroKey: false
     insertZeroKeyAdvanced: false
@@ -40,18 +44,20 @@ operation:
       items:
         - {}
     primaryKeyName: ""
+    refresh_mode: AUTO
     selectDistinct: false
     testsEnabled: false
     treatNullAsCurrentTimestamp: false
     truncateBefore: false
     type2Dimension: false
     updateStrategy: MERGE
+    warehouseName: dev_wh_xs
   database: ""
   deployEnabled: true
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: table
+  materializationType: dynamic table
   metadata:
     appliedNodeTests: []
     columns:
@@ -194,7 +200,7 @@ operation:
   name: DIM_IY1
   overrideSQL: false
   schema: ""
-  sqlType: base-node-types-advanced-deploy:::388
+  sqlType: "11"
   type: sql
   version: 1
 type: Node
