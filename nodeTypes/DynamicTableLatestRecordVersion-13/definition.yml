@@ -1,13 +1,13 @@
 fileVersion: 1
-id: "12"
+id: "13"
 isDisabled: false
 metadata:
   defaultStorageLocation: null
   error: null
-  nodeMetadataSpec: |
-    capitalized: Dynamic Table Dimension
-    short: DT_DIM
-    tagColor: "#E5FA31"
+  nodeMetadataSpec: |-
+    capitalized: Dyanmic Table Latest Record Version
+    short: DT_WRK_LRV
+    tagColor: "#FFD202"
     isDisabled: true
     plural: Dynamic Tables
 
@@ -124,7 +124,7 @@ metadata:
           attributeName: refresh_mode
           default: "AUTO"
           options:
-          - ''
+          - '' 
           - AUTO
           - INCREMENTAL
           - FULL
@@ -139,7 +139,7 @@ metadata:
           - ON_CREATE
           - ON_SCHEDULE 
           isRequired: false
-      
+
       - groupName: Advanced Options
         items:
 
@@ -170,21 +170,18 @@ metadata:
 
         - type: textBox
           displayName: Backfill Source Schema
-          attributeName: backfillSourceSchema
+          attributeName: backfillSourceSchema 
           default: ""
-          enableIf: "{% if config.backfill %} true {% else %} false {% endif %}"
 
         - type: textBox
           displayName: Backfill Source Table
           attributeName:  backfillSource
           default: ""
-          enableIf: "{% if config.backfill %} true {% else %} false {% endif %}"
           
         - type: toggleButton
           displayName: Use Time Travel
           attributeName: timeTravel
           default: false
-          enableIf: "{% if config.backfill %} true {% else %} false {% endif %}"
 
         - type: dropdownSelector
           displayName: Time Travel Type
@@ -213,7 +210,7 @@ metadata:
 
         enableIf: "{% if config.backfill and config.immutabilityConstraint %} true {% else %} false {% endif %}"
 
-      - groupName: Dimension Options
+      - groupName: Record Versioning Options
         items:
         - type: tabular
           displayName: 'Table Key(s)'
@@ -250,7 +247,26 @@ metadata:
         
           isRequired: false
           enableIf: "{% if config.recordVersioning in ('Datetime Column') %} true {% else %} false {% endif %}"
+
+        - type: tabular
+          displayName: 'Date / Timestamp Columns'
+          attributeName: orderByDateTime
+          columns:
+      
+          -  type: columnDropdownSelector
+             displayName: Date Column
+             attributeName: colNameDate
+             isRequired: true
+             enableIf: "{% if config.recordVersioning in ('Date Column and Time Column') %} true {% else %} false {% endif %}"
         
+          -  type: columnDropdownSelector
+             displayName: Timestamp Column
+             attributeName: colNameTimestamp
+             isRequired: true
+             enableIf: "{% if config.recordVersioning in ('Date Column and Time Column') %} true {% else %} false {% endif %}"
+        
+          isRequired: false
+          enableIf: "{% if config.recordVersioning in ('Date Column and Time Column') %} true {% else %} false {% endif %}"
         
         - type: tabular
           displayName: 'Sequence'
@@ -281,27 +297,6 @@ metadata:
           isRequired: false
           enableIf: "{% if config.recordVersioning in ('Integer Column') %} true {% else %} false {% endif %}"
 
-        - type: tabular
-          displayName: 'Date / Timestamp Columns'
-          attributeName: orderByDateTime
-          columns:
-      
-          -  type: columnDropdownSelector
-             displayName: Date Column
-             attributeName: colNameDate
-             isRequired: true
-             enableIf: "{% if config.recordVersioning in ('Date Column and Time Column') %} true {% else %} false {% endif %}"
-        
-          -  type: columnDropdownSelector
-             displayName: Timestamp Column
-             attributeName: colNameTimestamp
-             isRequired: true
-             enableIf: "{% if config.recordVersioning in ('Date Column and Time Column') %} true {% else %} false {% endif %}"
-        
-          isRequired: false
-          enableIf: "{% if config.recordVersioning in ('Date Column and Time Column') %} true {% else %} false {% endif %}"
-
-       
       - groupName: General Options
         items: 
 
@@ -323,8 +318,8 @@ metadata:
           displayName: Allow Expressions in Cluster Key
           default: false
           isRequired: false
-          enableIf: "{% if config.clusterKey %} true {% else %} false {% endif %}"
-
+          enableIf: "{% if config.clusterKey  %} true {% else %} false {% endif %}"
+        
         - type: tabular
           displayName: 'Cluster Key'
           attributeName: clusterKeyConfig
@@ -356,36 +351,12 @@ metadata:
       
           isRequired: false
           enableIf: "{% if (config.clusterKey and config.clusterKeyExpressions) %} true {% else %} false {% endif %}"
-
+          
     systemColumns:
-    - displayName: '{{NODE_NAME}}_KEY'
-      transform: '{{ dimensionHistoryPk() }}'
-      dataType: STRING
-      placement: beginning
-      attributeName: isSurrogateKey
-
-    - displayName: RECORD_START_TIME
-      transform: "{%if config.recordVersioning not in ('Integer Column')%}{{order_by_col()}}{%else%} {{order_by_col_int()}}{%endif%}"
-      dataType: TIMESTAMP
-      placement: end
-      attributeName: isSystemStartDate
-
-    - displayName: RECORD_END_TIME
-      transform: "LEAD({%if config.recordVersioning not in ('Integer Column')%}{{order_by_col()}}{%else%}{{order_by_col_int()}} {%endif%}) OVER (PARTITION BY {{ partition_by() }} ORDER BY {{ order_by_col() }} asc)"
-      dataType: TIMESTAMP
-      placement: end
-      attributeName: isSystemEndDate
-
-    - displayName: RECORD_CURRENT_FLAG
-      transform: "CASE WHEN (LEAD({%if config.recordVersioning not in ('Integer Column')%}{{order_by_col()}}{%else%}{{order_by_col_int()}} {%endif%}) OVER (PARTITION BY {{ partition_by() }} ORDER BY {{ order_by_col() }} asc)) IS NULL THEN 1 ELSE 0 END"
-      dataType: NUMERIC
-      placement: end
-      attributeName: isRecordCurrent
-
-    - displayName: RECORD_CREATED_DATE
-      transform: "FIRST_VALUE({%if config.recordVersioning not in ('Integer Column')%}{{order_by_col()}}{%else%} {{order_by_col_int()}}{%endif%}) OVER (PARTITION BY {{ partition_by() }} ORDER BY {{ order_by_col() }} asc)"
-      dataType: TIMESTAMP
-      placement: end
-      attributeName: recordCreated
-name: New_DynamicTable_Dim
+      - displayName: RECORD_CREATED_DATE
+        transform: "FIRST_VALUE({%if config.recordVersioning not in ('Integer Column')%}{{order_by_col()}}{%else%} {{order_by_col_int()}}{%endif%}) OVER (PARTITION BY {{ partition_by() }} ORDER BY {{ order_by_col() }} asc)"
+        dataType: TIMESTAMP
+        placement: end
+        attributeName: recordCreated
+name: Dynamic Table Latest Record Version
 type: NodeType
