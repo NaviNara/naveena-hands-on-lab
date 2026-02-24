@@ -7,10 +7,17 @@ operation:
     attrcol:
       items:
         - {}
+    clusterKey: true
+    clusterKeyConfig:
+      items:
+        - columnName:
+            columnCounter: 698ec6de-6174-4cda-84d0-48dccce54acd
+            stepCounter: caf7afe7-dcc3-4536-a37a-1b86c9200941
     colpreview:
       items:
         - {}
     createcortex: false
+    downstreamOption: true
     embmodel: ""
     excss: false
     filcrit:
@@ -20,7 +27,8 @@ operation:
     initialize: ON_CREATE
     lagSpecification:
       items:
-        - {}
+        - lagPeriod: Minutes
+          lagValue: "60"
     locCSS: ""
     lopt: and
     mulfilcon: false
@@ -31,6 +39,7 @@ operation:
         - {}
     query1: ""
     querycortex: false
+    refresh_mode: AUTO
     timdec: false
     timedecay:
       items:
@@ -41,7 +50,7 @@ operation:
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: cortex search service
+  materializationType: dynamic table
   metadata:
     appliedNodeTests: []
     columns:
@@ -132,7 +141,7 @@ operation:
   name: CSS_IY
   overrideSQL: false
   schema: ""
-  sqlType: cortex:::499
+  sqlType: "11"
   type: sql
   version: 1
 type: Node
