@@ -13,7 +13,7 @@ operation:
     clusterKeyConfig:
       items:
         - columnName:
-            columnCounter: 61884639-3896-47f3-9789-2f01d9b456b9
+            columnCounter: 4319dad5-8856-497c-99f0-4e312bc8b61c
             stepCounter: 296b3b31-d13b-4db5-a19c-94e1febb5740
     colpreview:
       items:
@@ -55,7 +55,7 @@ operation:
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: transient dynamic table
+  materializationType: dynamic table
   metadata:
     appliedNodeTests: []
     columns:
