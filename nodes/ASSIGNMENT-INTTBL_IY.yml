@@ -1,57 +1,41 @@
 fileVersion: 1
-id: d2dd01fa-ba75-4974-83fb-b39e34a0ca7b
-name: CSS_IY
+id: c16f02ff-79ed-421c-80b1-15c8b2ae9595
+name: INTTBL_IY
 operation:
   config:
-    allcol: false
-    attrcol:
-      items:
-        - {}
+    autoRefresh: false
     clusterKey: true
     clusterKeyConfig:
       items:
-        - columnName: null
-    colpreview:
+        - columnName:
+            columnCounter: 202a2e67-5a53-4abc-8026-8575d02b4346
+            stepCounter: c16f02ff-79ed-421c-80b1-15c8b2ae9595
+    clusterKeyConfigExpressions:
       items:
         - {}
-    createcortex: false
+    clusterKeyExpressions: false
     downstreamOption: true
-    embmodel: ""
-    excss: false
-    filcrit:
-      items:
-        - {}
-    filtoggle: false
+    groupByAll: false
     initialize: ON_CREATE
+    insertStrategy: UNION ALL
     lagSpecification:
       items:
         - lagPeriod: Minutes
-    locCSS: ""
-    lopt: and
-    mulfilcon: false
-    namCSS: ""
-    numboost: false
-    numericboost:
-      items:
-        - {}
+          lagValue: "60"
     orderBy:
       items:
         - colName:
-            columnCounter: 8e81b43b-3b31-43d9-8ce4-ae5bb726e066
-            stepCounter: d2dd01fa-ba75-4974-83fb-b39e34a0ca7b
+            columnCounter: bdf27ce4-e408-4f19-8d31-600233c20ba4
+            stepCounter: c16f02ff-79ed-421c-80b1-15c8b2ae9595
     partitionBy:
       items:
         - partColName:
-            columnCounter: 22a6fd8a-e7d7-4423-95c0-71a3da39d841
-            stepCounter: d2dd01fa-ba75-4974-83fb-b39e34a0ca7b
-    query1: ""
-    querycortex: false
+            columnCounter: 202a2e67-5a53-4abc-8026-8575d02b4346
+            stepCounter: c16f02ff-79ed-421c-80b1-15c8b2ae9595
     recordVersioning: Datetime Column
     refresh_mode: AUTO
-    timdec: false
-    timedecay:
-      items:
-        - {}
+    selectDistinct: false
+    testsEnabled: false
     warehouseName: dev_wh_xs
   database: ""
   deployEnabled: true
@@ -64,8 +48,8 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: ee241365-1656-4ba2-adc1-3641f4e07471
-          stepCounter: d2dd01fa-ba75-4974-83fb-b39e34a0ca7b
+          columnCounter: 3dcf19a0-afe6-49b1-a72d-fada6f97334f
+          stepCounter: c16f02ff-79ed-421c-80b1-15c8b2ae9595
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -78,8 +62,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: d428dcd4-afc4-4b74-bfda-ae33cc96474d
-          stepCounter: d2dd01fa-ba75-4974-83fb-b39e34a0ca7b
+          columnCounter: b53d1163-dbe7-418b-bb04-767b05c9ceae
+          stepCounter: c16f02ff-79ed-421c-80b1-15c8b2ae9595
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -92,8 +76,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 22a6fd8a-e7d7-4423-95c0-71a3da39d841
-          stepCounter: d2dd01fa-ba75-4974-83fb-b39e34a0ca7b
+          columnCounter: 202a2e67-5a53-4abc-8026-8575d02b4346
+          stepCounter: c16f02ff-79ed-421c-80b1-15c8b2ae9595
         config: {}
         dataType: VARCHAR(100)
         description: ""
@@ -106,8 +90,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 09f1ab40-0158-443d-9695-b3e6825c083c
-          stepCounter: d2dd01fa-ba75-4974-83fb-b39e34a0ca7b
+          columnCounter: 705e93e0-48c9-450e-8083-f62bd508b9c9
+          stepCounter: c16f02ff-79ed-421c-80b1-15c8b2ae9595
         config: {}
         dataType: DATE
         description: ""
@@ -120,8 +104,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 8e81b43b-3b31-43d9-8ce4-ae5bb726e066
-          stepCounter: d2dd01fa-ba75-4974-83fb-b39e34a0ca7b
+          columnCounter: bdf27ce4-e408-4f19-8d31-600233c20ba4
+          stepCounter: c16f02ff-79ed-421c-80b1-15c8b2ae9595
         config: {}
         dataType: TIMESTAMP_NTZ(9)
         description: ""
@@ -144,9 +128,9 @@ operation:
             nodeName: IY
         join:
           joinCondition: FROM {{ ref('ASSIGNMENT', 'IY') }} "IY"
-        name: CSS_IY
+        name: INTTBL_IY
         noLinkRefs: []
-  name: CSS_IY
+  name: INTTBL_IY
   overrideSQL: false
   schema: ""
   sqlType: "12"

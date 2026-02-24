@@ -1,57 +1,37 @@
 fileVersion: 1
-id: d2dd01fa-ba75-4974-83fb-b39e34a0ca7b
-name: CSS_IY
+id: 738767e9-9cf8-411b-bc65-26c8d3ff8760
+name: MV_IY
 operation:
   config:
-    allcol: false
-    attrcol:
-      items:
-        - {}
     clusterKey: true
     clusterKeyConfig:
       items:
-        - columnName: null
-    colpreview:
+        - columnName:
+            columnCounter: d6734af5-49ec-4775-808c-a06782487ae4
+            stepCounter: 738767e9-9cf8-411b-bc65-26c8d3ff8760
+    clusterKeyConfigExpressions:
       items:
         - {}
-    createcortex: false
+    clusterKeyExpressions: false
     downstreamOption: true
-    embmodel: ""
-    excss: false
-    filcrit:
-      items:
-        - {}
-    filtoggle: false
     initialize: ON_CREATE
     lagSpecification:
-      items:
-        - lagPeriod: Minutes
-    locCSS: ""
-    lopt: and
-    mulfilcon: false
-    namCSS: ""
-    numboost: false
-    numericboost:
       items:
         - {}
     orderBy:
       items:
         - colName:
-            columnCounter: 8e81b43b-3b31-43d9-8ce4-ae5bb726e066
-            stepCounter: d2dd01fa-ba75-4974-83fb-b39e34a0ca7b
+            columnCounter: 4f0fb752-7137-411e-9d6a-8712ab695172
+            stepCounter: 738767e9-9cf8-411b-bc65-26c8d3ff8760
     partitionBy:
       items:
         - partColName:
-            columnCounter: 22a6fd8a-e7d7-4423-95c0-71a3da39d841
-            stepCounter: d2dd01fa-ba75-4974-83fb-b39e34a0ca7b
-    query1: ""
-    querycortex: false
+            columnCounter: d6734af5-49ec-4775-808c-a06782487ae4
+            stepCounter: 738767e9-9cf8-411b-bc65-26c8d3ff8760
     recordVersioning: Datetime Column
     refresh_mode: AUTO
-    timdec: false
-    timedecay:
-      items:
-        - {}
+    secureOption: false
+    selectDistinct: false
     warehouseName: dev_wh_xs
   database: ""
   deployEnabled: true
@@ -64,8 +44,8 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: ee241365-1656-4ba2-adc1-3641f4e07471
-          stepCounter: d2dd01fa-ba75-4974-83fb-b39e34a0ca7b
+          columnCounter: ec0d29b8-1e3b-4162-9c7b-4b41348d4a98
+          stepCounter: 738767e9-9cf8-411b-bc65-26c8d3ff8760
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -78,8 +58,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: d428dcd4-afc4-4b74-bfda-ae33cc96474d
-          stepCounter: d2dd01fa-ba75-4974-83fb-b39e34a0ca7b
+          columnCounter: 8d655235-fa70-4630-97dc-2c7fba1e8ffb
+          stepCounter: 738767e9-9cf8-411b-bc65-26c8d3ff8760
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -92,8 +72,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 22a6fd8a-e7d7-4423-95c0-71a3da39d841
-          stepCounter: d2dd01fa-ba75-4974-83fb-b39e34a0ca7b
+          columnCounter: d6734af5-49ec-4775-808c-a06782487ae4
+          stepCounter: 738767e9-9cf8-411b-bc65-26c8d3ff8760
         config: {}
         dataType: VARCHAR(100)
         description: ""
@@ -106,8 +86,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 09f1ab40-0158-443d-9695-b3e6825c083c
-          stepCounter: d2dd01fa-ba75-4974-83fb-b39e34a0ca7b
+          columnCounter: bc25ae07-a6b9-4edc-8b93-6e03bb23a4e0
+          stepCounter: 738767e9-9cf8-411b-bc65-26c8d3ff8760
         config: {}
         dataType: DATE
         description: ""
@@ -120,8 +100,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 8e81b43b-3b31-43d9-8ce4-ae5bb726e066
-          stepCounter: d2dd01fa-ba75-4974-83fb-b39e34a0ca7b
+          columnCounter: 4f0fb752-7137-411e-9d6a-8712ab695172
+          stepCounter: 738767e9-9cf8-411b-bc65-26c8d3ff8760
         config: {}
         dataType: TIMESTAMP_NTZ(9)
         description: ""
@@ -144,9 +124,9 @@ operation:
             nodeName: IY
         join:
           joinCondition: FROM {{ ref('ASSIGNMENT', 'IY') }} "IY"
-        name: CSS_IY
+        name: MV_IY
         noLinkRefs: []
-  name: CSS_IY
+  name: MV_IY
   overrideSQL: false
   schema: ""
   sqlType: "12"
