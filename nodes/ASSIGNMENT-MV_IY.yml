@@ -3,22 +3,42 @@ id: 4443c6d5-6ed0-4735-a064-4c6301cdbb13
 name: MV_IY
 operation:
   config:
-    clusterKey: false
+    clusterKey: true
     clusterKeyConfig:
       items:
-        - {}
+        - columnName:
+            columnCounter: 727ba020-c051-4686-a3e6-303653becf07
+            stepCounter: 4443c6d5-6ed0-4735-a064-4c6301cdbb13
     clusterKeyConfigExpressions:
       items:
         - {}
     clusterKeyExpressions: false
+    downstreamOption: true
+    initialize: ON_CREATE
+    lagSpecification:
+      items:
+        - lagPeriod: Minutes
+    orderBy:
+      items:
+        - colName:
+            columnCounter: f03857d7-7ee5-44f2-aeb7-fea282ca1063
+            stepCounter: 4443c6d5-6ed0-4735-a064-4c6301cdbb13
+    partitionBy:
+      items:
+        - partColName:
+            columnCounter: 727ba020-c051-4686-a3e6-303653becf07
+            stepCounter: 4443c6d5-6ed0-4735-a064-4c6301cdbb13
+    recordVersioning: Datetime Column
+    refresh_mode: AUTO
     secureOption: false
     selectDistinct: false
+    warehouseName: dev_wh_xs
   database: ""
   deployEnabled: true
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: Materialized View
+  materializationType: dynamic table
   metadata:
     appliedNodeTests: []
     columns:
@@ -109,7 +129,7 @@ operation:
   name: MV_IY
   overrideSQL: false
   schema: ""
-  sqlType: "10"
+  sqlType: "12"
   type: sql
   version: 1
 type: Node

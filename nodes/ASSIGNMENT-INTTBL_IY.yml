@@ -14,11 +14,25 @@ operation:
       items:
         - {}
     clusterKeyExpressions: false
+    downstreamOption: true
     groupByAll: false
+    initialize: ON_CREATE
     insertStrategy: UNION ALL
     lagSpecification:
       items:
         - {}
+    orderBy:
+      items:
+        - colName:
+            columnCounter: ac5b9bf7-207b-4aeb-8bee-63d6a5bde8ef
+            stepCounter: e2fae070-266b-4ef6-9e90-d926efc2a4f9
+    partitionBy:
+      items:
+        - partColName:
+            columnCounter: 03d845e0-fdde-4484-85ba-219070593978
+            stepCounter: e2fae070-266b-4ef6-9e90-d926efc2a4f9
+    recordVersioning: Datetime Column
+    refresh_mode: AUTO
     selectDistinct: false
     testsEnabled: false
     warehouseName: dev_wh_xs
@@ -27,7 +41,7 @@ operation:
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: interactive table
+  materializationType: dynamic table
   metadata:
     appliedNodeTests: []
     columns:
@@ -118,7 +132,7 @@ operation:
   name: INTTBL_IY
   overrideSQL: false
   schema: ""
-  sqlType: interactive-table:::602
+  sqlType: "12"
   type: sql
   version: 1
 type: Node

@@ -3,15 +3,40 @@ id: a0c10cb6-e0b4-4c49-8167-dd79add848b1
 name: DIM_IY
 operation:
   config:
+    clusterKey: true
+    clusterKeyConfig:
+      items:
+        - columnName:
+            columnCounter: 541df2f0-51a4-4086-b809-7f8ea098c1f2
+            stepCounter: a0c10cb6-e0b4-4c49-8167-dd79add848b1
+    downstreamOption: true
+    initialize: ON_CREATE
+    lagSpecification:
+      items:
+        - lagPeriod: Minutes
+          lagValue: "60"
+    orderBy:
+      items:
+        - colName:
+            columnCounter: 0341d25a-4058-4947-ad06-6fe570b1db1d
+            stepCounter: a0c10cb6-e0b4-4c49-8167-dd79add848b1
+    partitionBy:
+      items:
+        - partColName:
+            columnCounter: 541df2f0-51a4-4086-b809-7f8ea098c1f2
+            stepCounter: a0c10cb6-e0b4-4c49-8167-dd79add848b1
     postSQL: ""
     preSQL: ""
+    recordVersioning: Datetime Column
+    refresh_mode: AUTO
     testsEnabled: true
+    warehouseName: dev_wh_xs
   database: ""
   deployEnabled: true
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: table
+  materializationType: dynamic table
   metadata:
     appliedNodeTests: []
     columns:
@@ -154,7 +179,7 @@ operation:
   name: DIM_IY
   overrideSQL: false
   schema: ""
-  sqlType: Dimension
+  sqlType: "12"
   type: sql
   version: 1
 type: Node

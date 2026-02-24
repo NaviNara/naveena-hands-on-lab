@@ -3,24 +3,44 @@ id: 4956cafe-a879-4a03-ba01-58240fd28395
 name: TSKWRK_IY
 operation:
   config:
-    clusterKey: false
+    clusterKey: true
     clusterKeyConfig:
       items:
-        - {}
+        - columnName:
+            columnCounter: 0bbedf79-b8fd-4463-868f-dd129d7759ce
+            stepCounter: 4956cafe-a879-4a03-ba01-58240fd28395
     clusterKeyConfigExpressions:
       items:
         - {}
     clusterKeyExpressions: false
     devMode: true
+    downstreamOption: true
     flagSrcStream: true
     groupByAll: false
+    initialize: ON_CREATE
     insertStrategy: UNION
+    lagSpecification:
+      items:
+        - lagPeriod: Minutes
+          lagValue: "60"
     multiStreamBehavior: AND
+    orderBy:
+      items:
+        - colName:
+            columnCounter: 0cf13d57-0c88-4e1e-85bf-7c0c79abb124
+            stepCounter: 4956cafe-a879-4a03-ba01-58240fd28395
     orderby: false
     orderbycolumn:
       items:
         - {}
+    partitionBy:
+      items:
+        - partColName:
+            columnCounter: 0bbedf79-b8fd-4463-868f-dd129d7759ce
+            stepCounter: 4956cafe-a879-4a03-ba01-58240fd28395
     predTask: DATA_TRANSFORMATION_ROOT_TASK
+    recordVersioning: Datetime Column
+    refresh_mode: AUTO
     rootTask: DATA_TRANSFORMATION_ROOT_TASK
     scheduleCRON: 5 0-23 * * * America/Los_Angeles
     schedulePeriod: "60"
@@ -29,13 +49,14 @@ operation:
     selectDistinct: false
     serverlessSize: MEDIUM
     truncateBefore: true
+    warehouseName: dev_wh_xs
     whName: <WAREHOUSE_NAME>
   database: ""
   deployEnabled: true
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: task
+  materializationType: dynamic table
   metadata:
     appliedNodeTests: []
     columns:
@@ -126,7 +147,7 @@ operation:
   name: TSKWRK_IY
   overrideSQL: false
   schema: ""
-  sqlType: "14"
+  sqlType: "12"
   type: sql
   version: 1
 type: Node

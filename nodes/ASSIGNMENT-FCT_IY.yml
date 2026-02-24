@@ -3,15 +3,40 @@ id: f3d3a76c-2ffc-4c3a-845c-030608065d2f
 name: FCT_IY
 operation:
   config:
+    clusterKey: true
+    clusterKeyConfig:
+      items:
+        - columnName:
+            columnCounter: 72e3f331-287f-4695-894c-e55cad264c41
+            stepCounter: f3d3a76c-2ffc-4c3a-845c-030608065d2f
+    downstreamOption: true
+    initialize: ON_CREATE
+    lagSpecification:
+      items:
+        - lagPeriod: Minutes
+          lagValue: "60"
+    orderBy:
+      items:
+        - colName:
+            columnCounter: a150f41a-2eca-4a30-958c-ffc02ab78dc3
+            stepCounter: f3d3a76c-2ffc-4c3a-845c-030608065d2f
+    partitionBy:
+      items:
+        - partColName:
+            columnCounter: 72e3f331-287f-4695-894c-e55cad264c41
+            stepCounter: f3d3a76c-2ffc-4c3a-845c-030608065d2f
     postSQL: ""
     preSQL: ""
+    recordVersioning: Datetime Column
+    refresh_mode: AUTO
     testsEnabled: true
+    warehouseName: dev_wh_xs
   database: ""
   deployEnabled: true
   description: ""
   isMultisource: false
   locationName: ASSIGNMENT
-  materializationType: table
+  materializationType: dynamic table
   metadata:
     appliedNodeTests: []
     columns:
@@ -103,7 +128,7 @@ operation:
   name: FCT_IY
   overrideSQL: false
   schema: ""
-  sqlType: Fact
+  sqlType: "12"
   type: sql
   version: 1
 type: Node
