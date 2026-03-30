@@ -1,0 +1,140 @@
+fileVersion: 1
+id: c082a9bd-ed20-426c-9564-d8ae41549e95
+name: CSS_IY
+operation:
+  config:
+    allcol: false
+    attrcol:
+      items:
+        - {}
+    colpreview:
+      items:
+        - {}
+    createcortex: false
+    embmodel: ""
+    excss: false
+    filcrit:
+      items:
+        - {}
+    filtoggle: false
+    initialize: ON_CREATE
+    lagSpecification:
+      items:
+        - lagPeriod: Minutes
+          lagValue: "60"
+    locCSS: ""
+    lopt: and
+    mulfilcon: false
+    namCSS: ""
+    numboost: false
+    numericboost:
+      items:
+        - {}
+    query1: ""
+    querycortex: false
+    refresh_mode: AUTO
+    timdec: false
+    timedecay:
+      items:
+        - {}
+    warehouseName: dev_wh_xs
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ASSIGNMENT
+  materializationType: cortex search service
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 03c2e455-a428-41d1-b16f-08c50393c2d8
+          stepCounter: c082a9bd-ed20-426c-9564-d8ae41549e95
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: IY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dd5fec3b-4b22-4678-a721-19d8e0d316ab
+                stepCounter: 5cf55455-0983-4548-b402-4828c48f09fd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 265d0b08-203a-407a-8335-19c72f4fa0cd
+          stepCounter: c082a9bd-ed20-426c-9564-d8ae41549e95
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 61d681ab-651c-40e6-aa86-2cc27a5266b5
+                stepCounter: 5cf55455-0983-4548-b402-4828c48f09fd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a90770cb-f0b0-4f6c-bb4d-4d06670976d5
+          stepCounter: c082a9bd-ed20-426c-9564-d8ae41549e95
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ac161cbb-34ff-4ae6-8d19-b79a3e09152e
+                stepCounter: 5cf55455-0983-4548-b402-4828c48f09fd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fd2188d6-0b54-42e8-9e21-b7352591d2f1
+          stepCounter: c082a9bd-ed20-426c-9564-d8ae41549e95
+        config: {}
+        dataType: DATE
+        description: ""
+        name: CREATED_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cfcf753c-8732-43a2-b9b4-07f70801e278
+                stepCounter: 5cf55455-0983-4548-b402-4828c48f09fd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fa51814b-e452-4c55-bb5c-68e8030d2508
+          stepCounter: c082a9bd-ed20-426c-9564-d8ae41549e95
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: CREATED_TS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0f56b4c1-c47d-47d8-850d-c812f46bb8da
+                stepCounter: 5cf55455-0983-4548-b402-4828c48f09fd
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          IY: 5cf55455-0983-4548-b402-4828c48f09fd
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ASSIGNMENT
+            nodeName: IY
+        join:
+          joinCondition: FROM {{ ref('ASSIGNMENT', 'IY') }} "IY"
+        name: CSS_IY
+        noLinkRefs: []
+  name: CSS_IY
+  overrideSQL: false
+  schema: ""
+  sqlType: "11"
+  type: sql
+  version: 1
+type: Node
