@@ -1,0 +1,654 @@
+fileVersion: 1
+id: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+name: DIM_TIME_CUSTOMER
+operation:
+  config:
+    businessEnd: "17:00:00"
+    businessStart: "08:00:00"
+    generatedTime: TIME_COL
+    granularity: MINUTE
+    insertZeroKey: false
+    insertZeroKeyBusinessKey: "99:99:99"
+    insertZeroKeyStr: UNKNOWN
+    insertZeroKeyTime: "00:00:00"
+    peakEnd: "17:00:00"
+    peakStart: "09:00:00"
+    populateOnDeploy: false
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: false
+  database: ""
+  deployEnabled: true
+  description: Customer data as defined by TPC-H
+  isMultisource: false
+  locationName: ASSIGNMENT
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8571b5cc-e286-4cb8-8c3b-2911f3bea18d
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: VARCHAR(8)
+        defaultValue: ""
+        description: Primary key - the time value - HH:MM:SS
+        isBusinessKey: true
+        name: TIME_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "{{ config.generatedTime }}"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 12487af8-ad24-401e-848e-bcee5b85f17b
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: SMALLINT
+        defaultValue: ""
+        description: Hour in 24-hour format (0-23)
+        isHour24: true
+        name: HOUR_24
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: EXTRACT(HOUR FROM TO_TIME({{ config.generatedTime }}))
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c52395db-4691-4b75-8f7c-3174f1fe95fb
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: SMALLINT
+        defaultValue: ""
+        description: Hour in 12-hour format (1-12)
+        isHour12: true
+        name: HOUR_12
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: TO_CHAR(TO_TIME({{ config.generatedTime }}), 'HH12')
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0758ee11-af89-4f16-ac4a-5043dfefac25
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: SMALLINT
+        defaultValue: ""
+        description: Minute of the hour (0-59)
+        isMinute: true
+        name: MINUTE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: EXTRACT(MINUTE FROM TO_TIME({{ config.generatedTime }}))
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2f879577-59d9-4e40-8c59-7709fddedd8c
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: SMALLINT
+        defaultValue: ""
+        description: Second of the minute (0-59)
+        isSecond: true
+        name: SECOND
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: EXTRACT(SECOND FROM TO_TIME({{ config.generatedTime }}))
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 58e4cf48-118e-4826-bd7c-af1797bb532f
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: VARCHAR(2)
+        defaultValue: ""
+        description: "'AM' or 'PM' Indicator"
+        isAMPM: true
+        name: AM_PM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: TO_CHAR(TO_TIME({{ config.generatedTime }}), 'AM')
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cd46a453-9897-4890-a2bb-c40c925dc0d6
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: VARCHAR(5)
+        defaultValue: ""
+        description: Formatted as 'HH:MM'
+        isHourMinute: true
+        name: HOUR_MINUTE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: SUBSTR({{ config.generatedTime }}, 1, 5)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 591b8cd6-35fe-4d68-8688-52c414e196ce
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: VARCHAR(8)
+        defaultValue: ""
+        description: Formatted as 'HH:MM:SS'
+        isHourMinuteSecond: true
+        name: HOUR_MINUTE_SECOND
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "{{ config.generatedTime }}"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 87468726-10af-4492-94cb-d0d07c640002
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: VARCHAR(11)
+        defaultValue: ""
+        description: Formatted as 'HH:MM:SS AM'
+        is12Hr: true
+        name: TIME_12_HOUR_FORMAT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: TO_CHAR({{ config.generatedTime }}, 'HH12:MI:SS AM')
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c5458553-dfca-4b73-8a84-c60572728912
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: SMALLINT
+        defaultValue: ""
+        description: 1-indexed hour of the day (1-24)
+        isHourOfDay: true
+        name: HOUR_OF_DAY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: FLOOR(EXTRACT(HOUR FROM {{ config.generatedTime }})) + 1
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c6fbbbf2-75de-484e-897a-b102c781a010
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: SMALLINT
+        defaultValue: ""
+        description: 1-indexed minute of the day (1-1440)
+        isMinuteOfDay: true
+        name: MINUTE_OF_DAY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: FLOOR(EXTRACT(HOUR FROM {{ config.generatedTime }})) * 60 + FLOOR(EXTRACT(MINUTE FROM {{ config.generatedTime }})) + 1
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d4bc2f85-f75c-43fc-8e66-28acfdb71fa9
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: SMALLINT
+        defaultValue: ""
+        description: Quarter-hour of the day (1-96)
+        isQuarterHour: true
+        name: QUARTER_HOUR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: (FLOOR(EXTRACT(HOUR FROM {{ config.generatedTime }})) * 4) + (FLOOR((EXTRACT(MINUTE FROM {{ config.generatedTime }})) / 15) + 1)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2f328c95-ebf2-489d-af0a-93fb2d66ad80
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: SMALLINT
+        defaultValue: ""
+        description: Which quarter within the hour (1-4)
+        isQuarterHourofHour: true
+        name: QUARTER_HOUR_OF_HOUR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: FLOOR(EXTRACT(MINUTE FROM {{ config.generatedTime }}) / 15) + 1
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d7c7a0ea-8317-4ecf-a9d7-13d3d432a327
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: SMALLINT
+        defaultValue: ""
+        description: Half-hour of the day (1-48)
+        isHalfHour: true
+        name: HALF_HOUR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: (FLOOR(EXTRACT(HOUR FROM {{ config.generatedTime }})) * 2) + (FLOOR((EXTRACT(MINUTE FROM {{ config.generatedTime }})) / 30) + 1)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 37892c43-074e-43ae-94e4-5344bccfe1f6
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: SMALLINT
+        defaultValue: ""
+        description: Which half within the hour (1-2)
+        isHalfHourOfHour: true
+        name: HALF_HOUR_OF_HOUR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: FLOOR(EXTRACT(MINUTE FROM {{ config.generatedTime }}) / 30) + 1
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ac43620e-82c3-4647-8417-39ba28916e97
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: Total minutes from midnight (0-1439)
+        isMInSinceMidnight: true
+        name: MINUTES_SINCE_MIDNIGHT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: (EXTRACT(HOUR FROM {{ config.generatedTime }}) * 60) + (EXTRACT(MINUTE FROM {{ config.generatedTime }}))
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1297bf4b-0c92-4bc5-a1e1-5651879c9957
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: Total seconds from midnight (0-86399)
+        isSecondsSinceMidnight: true
+        name: SECONDS_SINCE_MIDNIGHT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: (EXTRACT(HOUR FROM {{ config.generatedTime }}) * 3600 + EXTRACT(MINUTE FROM {{ config.generatedTime }}) * 60 + EXTRACT(SECOND FROM {{ config.generatedTime }}))
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0796edfe-1167-4740-8614-72947404f132
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: TIME
+        defaultValue: ""
+        description: Start time of the quarter-hour block
+        isQHourStart: true
+        name: QUARTER_HOUR_START
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: TIMEADD(MINUTE, FLOOR(MINUTES_SINCE_MIDNIGHT / 15) * 15, '00:00:00'::TIME)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 22bae45f-1b5d-4009-92a6-fe1027c4bae9
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: TIME
+        defaultValue: ""
+        description: End time of the quarter-hour block
+        isQHourEnd: true
+        name: QUARTER_HOUR_END
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: TIMEADD(MINUTE, FLOOR(MINUTES_SINCE_MIDNIGHT / 15) * 15, '00:14:59'::TIME)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 76909be2-531d-4348-b7a0-a15961f91964
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: VARCHAR(17)
+        defaultValue: ""
+        description: 15-minute block range
+        isInt15Min: true
+        name: TIME_INTERVAL_15MIN
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: QUARTER_HOUR_START || '-' || QUARTER_HOUR_END
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fb94693b-6435-4253-954e-f5eb19b53386
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: VARCHAR(17)
+        defaultValue: ""
+        description: 30-minute block range
+        isInt30Min: true
+        name: TIME_INTERVAL_30MIN
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: " LPAD(DATE_PART(HOUR, {{ config.generatedTime }}), 2, '0') || ':' || LPAD(FLOOR(DATE_PART(MINUTE, {{ config.generatedTime }}) / 30) * 30, 2, '0') || ':00' || '-' || LPAD(DATE_PART(HOUR, {{ config.generatedTime }}), 2, '0') || ':' || LPAD((FLOOR(DATE_PART(MINUTE, {{ config.generatedTime }}) / 30) * 30) + 29, 2, '0') || ':59' "
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fe7aabf9-8d40-4dc8-8485-0dfb065a3462
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: VARCHAR(17)
+        defaultValue: ""
+        description: Hour block range
+        isInt60Min: true
+        name: TIME_INTERVAL_HOUR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: TO_CHAR({{ config.generatedTime }}, 'HH24') || ':00:00-' || TO_CHAR({{ config.generatedTime }}, 'HH24') || ':59:59'
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ffd50f53-b6c5-4e04-8fe8-781caee8a01f
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: "Period: 'Morning', 'Afternoon', 'Evening', 'Night'"
+        isTimeDay: true
+        name: TIME_OF_DAY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CASE WHEN HOUR_24 >= 5 AND HOUR_24 < 12 THEN 'Morning' WHEN HOUR_24 >= 12 AND HOUR_24 < 17 THEN 'Afternoon'     WHEN HOUR_24 >= 17 AND HOUR_24 < 21 THEN 'Evening' ELSE 'Night' END
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 89e9c8ae-7a71-45f8-9a6a-2fe341614fbe
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: "Granular period: 'Early Morning', 'Mid-Morning', 'Lunch', 'Early Afternoon', 'Late Afternoon', 'Early Evening', 'Late Evening', 'Overnight'"
+        isHourBand: true
+        name: HOUR_BAND
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CASE WHEN HOUR_24 >= 5 AND HOUR_24 < 9 THEN 'Early Morning' WHEN HOUR_24 >= 9 AND HOUR_24 < 12 THEN 'Mid-Morning' WHEN HOUR_24 >= 12 AND HOUR_24 < 14 THEN 'Lunch' WHEN HOUR_24 >= 14 AND HOUR_24 < 17 THEN 'Early Afternoon'  WHEN HOUR_24 >= 17 AND HOUR_24 < 19 THEN 'Late Afternoon' WHEN HOUR_24 >= 19 AND HOUR_24 < 21 THEN 'Early Evening' WHEN HOUR_24 >= 21 AND HOUR_24 < 24 THEN 'Late Evening' ELSE 'Overnight' END
+      - IsDayNight: true
+        acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bbf89c50-00a3-4c43-894a-3e476eb5b324
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: VARCHAR(5)
+        defaultValue: ""
+        description: "Simple classification: 'Day' or 'Night'"
+        name: DAY_NIGHT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CASE WHEN HOUR_24 >= 6 AND HOUR_24 < 18 THEN 'Day' ELSE 'Night' END
+      - IsBusinessHour: true
+        acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bcb42daf-ad84-4ec6-ac2c-f28b05ffd164
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: VARCHAR(1)
+        defaultValue: ""
+        description: "'Y' if within configured business hours, 'N' otherwise"
+        name: FLAG_BUSINESS_HOURS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CASE WHEN TO_TIME({{ config.generatedTime }}) BETWEEN TO_TIME('{{ config.businessStart }}') AND TO_TIME('{{ config.businessEnd }}') THEN 'Y' ELSE 'N' END
+      - IsPeakOrNo: true
+        acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: da6ac9fb-a312-4c35-a06b-d8c02b7c390b
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: VARCHAR(10)
+        defaultValue: ""
+        description: "'Peak' or 'Off-Peak' based on configured peak hours"
+        name: PEAK_OFF_PEAK
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CASE WHEN TO_TIME({{ config.generatedTime }}) BETWEEN TO_TIME('{{ config.peakStart }}') AND TO_TIME('{{ config.peakEnd }}') THEN 'Peak' ELSE 'Off-Peak' END
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6d15f921-52bd-4975-b0cb-4bb7061eeaec
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: C_CUSTKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c97c2ca9-7cb0-472f-9e6a-17f867c7fb6c
+                stepCounter: cebe5dae-b2fa-4a13-8d84-5fec22b40230
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a2356143-4933-4dff-af9f-6b2d0efeccb0
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: VARCHAR(25)
+        description: ""
+        name: C_NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ebf82a8d-775f-4520-8cdb-571d6fbc3afc
+                stepCounter: cebe5dae-b2fa-4a13-8d84-5fec22b40230
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 961d2d3c-1b65-4af5-9278-c4510ce4b4f4
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: VARCHAR(40)
+        description: ""
+        name: C_ADDRESS
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 143f9ab0-b63f-4d42-be74-6dea06551521
+                stepCounter: cebe5dae-b2fa-4a13-8d84-5fec22b40230
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2947bc12-edb0-4ec1-91a5-de1d04257b74
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: C_NATIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 134c6f0c-9cc9-462c-b66c-f2d0172d8ad9
+                stepCounter: cebe5dae-b2fa-4a13-8d84-5fec22b40230
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0bc4b56d-a21c-44f3-a3f7-607a20cbb064
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: VARCHAR(15)
+        description: ""
+        name: C_PHONE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: efe71248-0bc3-490c-b6a3-b3b55385dae0
+                stepCounter: cebe5dae-b2fa-4a13-8d84-5fec22b40230
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1887262b-5d4e-4215-82cc-399c14f9b878
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: NUMBER(12,2)
+        description: ""
+        name: C_ACCTBAL
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dd08f090-9fcc-4a3f-bdcf-43fa8c4d4fb5
+                stepCounter: cebe5dae-b2fa-4a13-8d84-5fec22b40230
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d0108256-4c5d-4acf-958e-3cdd4ad29322
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: VARCHAR(10)
+        description: ""
+        name: C_MKTSEGMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 347db1af-b505-4277-8419-22444d85b98a
+                stepCounter: cebe5dae-b2fa-4a13-8d84-5fec22b40230
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 34c3cb1c-959f-4cd7-b5ed-7fb71fbb1124
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: VARCHAR(117)
+        description: ""
+        name: C_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a961b647-b436-4948-baa6-5ce03ca5318d
+                stepCounter: cebe5dae-b2fa-4a13-8d84-5fec22b40230
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b1212d31-6f71-4923-822a-00f2351954ac
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fb058911-c4dc-4ca6-b3b0-508d2e60f8a8
+          stepCounter: 52f0fb2b-de58-4801-936d-69f6a4b33a03
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_CUSTOMER: cebe5dae-b2fa-4a13-8d84-5fec22b40230
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ASSIGNMENT
+            nodeName: STG_CUSTOMER
+        join:
+          joinCondition: FROM {{ ref('ASSIGNMENT', 'STG_CUSTOMER') }} "STG_CUSTOMER"
+        name: DIM_TIME_CUSTOMER
+        noLinkRefs: []
+  name: DIM_TIME_CUSTOMER
+  overrideSQL: false
+  schema: ""
+  sqlType: functional-node-types:::603
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,128 @@
+fileVersion: 1
+id: cca0196d-5e07-48f2-8ac3-6172b24671d7
+name: DT_WRK_NATION
+operation:
+  config:
+    advanceWarehouse: false
+    backfill: false
+    backfillSource: ""
+    backfillSourceSchema: ""
+    clusterKey: true
+    clusterKeyConfig:
+      items:
+        - columnName:
+            columnCounter: 40684c12-560e-4c4d-a9e8-11f5a938f974
+            stepCounter: cca0196d-5e07-48f2-8ac3-6172b24671d7
+    clusterKeyConfigExpressions:
+      items:
+        - columnNameExpressions:
+            columnCounter: 40684c12-560e-4c4d-a9e8-11f5a938f974
+            stepCounter: cca0196d-5e07-48f2-8ac3-6172b24671d7
+          sqlExpression: ex. trunc(<column_name>, -5)
+    clusterKeyExpressions: false
+    cpygrants: false
+    downstreamOption: true
+    groupByAll: false
+    immutabilityConstraint: false
+    immutableExpression: ""
+    initialize: ON_CREATE
+    initializeWarehouseSize: ""
+    insertStrategy: UNION ALL
+    lagSpecification:
+      items:
+        - lagPeriod: Minutes
+          lagValue: "60"
+    refreshWarehouseSize: ""
+    refresh_mode: AUTO
+    selectDistinct: false
+    timeTravel: false
+    timeTravelreference: ""
+    timeTraveltype: ""
+    timeTravelvalue: ""
+    warehouseName: dev_wh_xs
+  database: ""
+  deployEnabled: true
+  description: Nation data as defined by TPC-H
+  isMultisource: false
+  locationName: ASSIGNMENT
+  materializationType: dynamic table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c80a738a-66fe-4096-8c48-3c0de4d5a54f
+          stepCounter: cca0196d-5e07-48f2-8ac3-6172b24671d7
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: N_NATIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 70a76371-5dbd-4934-8e6e-0f226f808907
+                stepCounter: ce7f74ab-c24f-47bf-a45a-86e81540776b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 40684c12-560e-4c4d-a9e8-11f5a938f974
+          stepCounter: cca0196d-5e07-48f2-8ac3-6172b24671d7
+        config: {}
+        dataType: VARCHAR(25)
+        description: ""
+        name: N_NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 19137628-0eb3-411f-8e50-636c8e94fb4e
+                stepCounter: ce7f74ab-c24f-47bf-a45a-86e81540776b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9bb61080-1f41-4671-aec9-75471dcdb950
+          stepCounter: cca0196d-5e07-48f2-8ac3-6172b24671d7
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: N_REGIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ea15653f-8c8c-4a27-b90f-655005d200b0
+                stepCounter: ce7f74ab-c24f-47bf-a45a-86e81540776b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: df758296-bab9-414e-a4be-5b83af02315a
+          stepCounter: cca0196d-5e07-48f2-8ac3-6172b24671d7
+        config: {}
+        dataType: VARCHAR(152)
+        description: ""
+        name: N_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: be7f4c78-233e-4fdf-9cae-74449c9ec3a8
+                stepCounter: ce7f74ab-c24f-47bf-a45a-86e81540776b
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_NATION: ce7f74ab-c24f-47bf-a45a-86e81540776b
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ASSIGNMENT
+            nodeName: STG_NATION
+        join:
+          joinCondition: FROM {{ ref('ASSIGNMENT', 'STG_NATION') }} "STG_NATION"
+        name: DT_WRK_NATION
+        noLinkRefs: []
+  name: DT_WRK_NATION
+  overrideSQL: false
+  schema: ""
+  sqlType: dynamic-tables-217:::347
+  type: sql
+  version: 1
+type: Node

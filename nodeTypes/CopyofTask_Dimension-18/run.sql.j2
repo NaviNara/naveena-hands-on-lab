@@ -1,0 +1,19 @@
+{% if node.materializationType == 'task' %}
+
+    {{ stage('Enable Task DAG') }}
+
+    BEGIN
+        LET res STRING;
+
+        res := SYSTEM$TASK_DEPENDENTS_ENABLE(
+            '{{ ref_no_link(node.location.name, node.name) | replace('\"','') }}'
+        );
+
+        RETURN 'SUCCESS';
+
+    EXCEPTION
+        WHEN OTHER THEN
+            RETURN 'IGNORED ERROR';
+    END;
+
+{% endif %}
