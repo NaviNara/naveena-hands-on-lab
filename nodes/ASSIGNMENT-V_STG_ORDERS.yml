@@ -148,6 +148,7 @@ operation:
         customSQL:
           customSQL: |-
             {{ stage('Override Create SQL', deploy_phase_override="create") }}
+             -- test override
             	CREATE OR REPLACE VIEW {{ ref('ASSIGNMENT', 'V_STG_ORDERS')}} AS (
             		SELECT 
              "O_ORDERKEY" AS "O_ORDERKEY",
@@ -169,7 +170,7 @@ operation:
         name: V_STG_ORDERS
         noLinkRefs: []
   name: V_STG_ORDERS
-  overrideSQL: false
+  overrideSQL: true
   schema: ""
   sqlType: View
   type: sql
