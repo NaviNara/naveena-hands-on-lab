@@ -159,7 +159,7 @@ operation:
              "O_CLERK" AS "O_CLERK",
              "O_SHIPPRIORITY" AS "O_SHIPPRIORITY",
              "O_COMMENT" AS "O_COMMENT"
-             FROM {{ ref('ASSIGNMENT', 'STG_ORDERS') }} WHERE 1=1
+             FROM {{ ref('ASSIGNMENT', 'STG_ORDERS') }} 
             	)
         dependencies:
           - locationName: ASSIGNMENT
@@ -169,7 +169,7 @@ operation:
         name: V_STG_ORDERS
         noLinkRefs: []
   name: V_STG_ORDERS
-  overrideSQL: true
+  overrideSQL: false
   schema: ""
   sqlType: View
   type: sql
