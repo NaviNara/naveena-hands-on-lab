@@ -129,8 +129,81 @@ operation:
               - columnCounter: 2ea1cc71-6f8b-4033-b7b7-804b825cdb64
                 stepCounter: fc1bf3b7-fad9-4697-a575-36c2a602e4be
             transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019f5ac4-5370-750c-b473-78f121b8508a
+          stepCounter: cebe5dae-b2fa-4a13-8d84-5fec22b40230
+        config: {}
+        dataType: VARCHAR
+        description: First field extracted from comment
+        name: FIELDONE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a961b647-b436-4948-baa6-5ce03ca5318d
+                stepCounter: cebe5dae-b2fa-4a13-8d84-5fec22b40230
+            transform: SPLIT_PART("STG_CUSTOMER"."C_COMMENT", '|', 1)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019f5ac4-5370-750c-b473-7cea128e81b8
+          stepCounter: cebe5dae-b2fa-4a13-8d84-5fec22b40230
+        config: {}
+        dataType: VARCHAR
+        description: Second field extracted from comment
+        name: FIELDTWO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a961b647-b436-4948-baa6-5ce03ca5318d
+                stepCounter: cebe5dae-b2fa-4a13-8d84-5fec22b40230
+            transform: SPLIT_PART("STG_CUSTOMER"."C_COMMENT", '|', 2)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019f5ac4-5370-750c-b473-81286dbc2b05
+          stepCounter: cebe5dae-b2fa-4a13-8d84-5fec22b40230
+        config: {}
+        dataType: VARCHAR
+        description: Third field extracted from comment
+        name: FIELDTHREE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a961b647-b436-4948-baa6-5ce03ca5318d
+                stepCounter: cebe5dae-b2fa-4a13-8d84-5fec22b40230
+            transform: SPLIT_PART("STG_CUSTOMER"."C_COMMENT", '|', 3)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019f5ac4-5370-750c-b473-87663bd09b8d
+          stepCounter: cebe5dae-b2fa-4a13-8d84-5fec22b40230
+        config: {}
+        dataType: VARCHAR
+        description: Fourth field extracted from comment
+        name: FIELDFOUR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a961b647-b436-4948-baa6-5ce03ca5318d
+                stepCounter: cebe5dae-b2fa-4a13-8d84-5fec22b40230
+            transform: SPLIT_PART("STG_CUSTOMER"."C_COMMENT", '|', 4)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019f5ac4-5370-750c-b473-8bbfd570408c
+          stepCounter: cebe5dae-b2fa-4a13-8d84-5fec22b40230
+        config: {}
+        dataType: VARCHAR
+        description: Fifth field extracted from comment
+        name: FIELDFIVE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a961b647-b436-4948-baa6-5ce03ca5318d
+                stepCounter: cebe5dae-b2fa-4a13-8d84-5fec22b40230
+            transform: SPLIT_PART("STG_CUSTOMER"."C_COMMENT", '|', 5)
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           CUSTOMER: fc1bf3b7-fad9-4697-a575-36c2a602e4be

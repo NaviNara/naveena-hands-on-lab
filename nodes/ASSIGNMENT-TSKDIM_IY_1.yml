@@ -1,6 +1,6 @@
 fileVersion: 1
 id: 28359b33-2e88-43a3-a650-74dd1587f67e
-name: TSKDIM_IY
+name: TSKDIM_IY_1
 operation:
   config:
     clusterKey: false
@@ -172,9 +172,9 @@ operation:
             nodeName: IY
         join:
           joinCondition: FROM {{ ref('ASSIGNMENT', 'IY') }} "IY"
-        name: TSKDIM_IY
+        name: TSKDIM_IY_1
         noLinkRefs: []
-  name: TSKDIM_IY
+  name: TSKDIM_IY_1
   overrideSQL: false
   schema: ""
   sqlType: "15"

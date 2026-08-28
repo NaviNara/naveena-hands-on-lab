@@ -42,7 +42,7 @@ operation:
     warehouseName: dev_wh_xs
   database: ""
   deployEnabled: true
-  description: Nation data as defined by TPC-H
+  description: ""
   isMultisource: false
   locationName: ASSIGNMENT
   materializationType: dynamic table
@@ -105,8 +105,25 @@ operation:
               - columnCounter: be7f4c78-233e-4fdf-9cae-74449c9ec3a8
                 stepCounter: ce7f74ab-c24f-47bf-a45a-86e81540776b
             transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3162390c-48ce-4e3d-8c10-e1d4d70e642a
+          stepCounter: cca0196d-5e07-48f2-8ac3-6172b24671d7
+        config: {}
+        dataType: VARCHAR(25)
+        description: ""
+        name: demoTest
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 19137628-0eb3-411f-8e50-636c8e94fb4e
+                stepCounter: ce7f74ab-c24f-47bf-a45a-86e81540776b
+            transform: ""
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           STG_NATION: ce7f74ab-c24f-47bf-a45a-86e81540776b
@@ -123,6 +140,7 @@ operation:
   overrideSQL: false
   schema: ""
   sqlType: dynamic-tables-217:::347
+  table: DT_WRK_NATION
   type: sql
   version: 1
 type: Node
