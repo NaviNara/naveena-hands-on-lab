@@ -111,7 +111,7 @@ operation:
           stepCounter: cca0196d-5e07-48f2-8ac3-6172b24671d7
         config: {}
         dataType: VARCHAR(25)
-        description: ""
+        description: Sample demo column
         name: demoTest
         nullable: true
         sourceColumnReferences:
