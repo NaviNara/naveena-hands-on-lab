@@ -1,0 +1,73 @@
+fileVersion: 1
+id: 7bd7c640-1c49-496e-b096-71a6c1b05694
+name: SRC_B
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: ASSIGNMENT
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3b6bfa4e-f8e2-47ea-bd76-f10c4fa987f0
+          stepCounter: 7bd7c640-1c49-496e-b096-71a6c1b05694
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1d967ac6-5123-4f82-9057-1f743a1eb9c8
+          stepCounter: 7bd7c640-1c49-496e-b096-71a6c1b05694
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: CODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5f4dd977-9c08-48b4-a5f3-46407be4612e
+          stepCounter: 7bd7c640-1c49-496e-b096-71a6c1b05694
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: SRC_B
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

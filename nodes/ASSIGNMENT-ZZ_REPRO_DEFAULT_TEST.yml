@@ -1,0 +1,63 @@
+fileVersion: 1
+id: e9b21fb9-1703-4eb6-a582-a8f41a6acfc2
+name: ZZ_REPRO_DEFAULT_TEST
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ASSIGNMENT
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 67e65445-4c68-4d7c-b44a-6844463ea1cf
+          stepCounter: e9b21fb9-1703-4eb6-a582-a8f41a6acfc2
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: Unknown
+        description: ""
+        name: COL_NOTNULL_WITH_DEFAULT
+        nullable: false
+        sourceColumnReferences: []
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d9f9b45b-9dbc-4d52-b89d-3af847828bd8
+          stepCounter: e9b21fb9-1703-4eb6-a582-a8f41a6acfc2
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: Unknown
+        description: ""
+        name: COL_NULLABLE_WITH_DEFAULT
+        nullable: true
+        sourceColumnReferences: []
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies: []
+        join:
+          joinCondition: ""
+        name: ZZ_REPRO_DEFAULT_TEST
+        noLinkRefs: []
+  name: ZZ_REPRO_DEFAULT_TEST
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  table: ZZ_REPRO_DEFAULT_TEST
+  type: sql
+  version: 1
+type: Node

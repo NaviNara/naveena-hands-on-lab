@@ -1,0 +1,120 @@
+fileVersion: 1
+id: b6e2921d-3dcb-4740-bb07-fe29f388408d
+name: DT_WRK_SRC_A
+operation:
+  config:
+    advanceWarehouse: false
+    backfill: false
+    backfillSource: ""
+    backfillSourceSchema: ""
+    clusterKey: false
+    clusterKeyConfig:
+      items:
+        - {}
+    clusterKeyConfigExpressions:
+      items:
+        - {}
+    clusterKeyExpressions: false
+    cpygrants: false
+    downstreamOption: false
+    groupByAll: false
+    immutabilityConstraint: false
+    immutableExpression: ""
+    initialize: ON_CREATE
+    initializeWarehouseSize: ""
+    insertStrategy: UNION ALL
+    lagSpecification:
+      items:
+        - lagPeriod: Minutes
+          lagValue: "60"
+    refreshWarehouseSize: ""
+    refresh_mode: AUTO
+    selectDistinct: false
+    timeTravel: false
+    timeTravelreference: ""
+    timeTraveltype: ""
+    timeTravelvalue: ""
+    warehouseName: dev_wh_xs
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: true
+  locationName: ASSIGNMENT
+  materializationType: dynamic table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9f61863e-8c4a-455e-ad9a-4a874b7052e4
+          stepCounter: b6e2921d-3dcb-4740-bb07-fe29f388408d
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"SRC_A\".\"ID\""
+          - columnReferences: []
+            transform: "\"SRC_B\".\"ID\""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 45cc787f-0584-4cc8-9c9a-04849cb7e867
+          stepCounter: b6e2921d-3dcb-4740-bb07-fe29f388408d
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"SRC_A\".\"CODE\""
+          - columnReferences: []
+            transform: "NULL"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4d8707cd-5ad3-4b0a-9514-1520aaa1d537
+          stepCounter: b6e2921d-3dcb-4740-bb07-fe29f388408d
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "\"SRC_A\".\"NAME\""
+          - columnReferences: []
+            transform: "NULL"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          SRC_A: 8774ae4a-2b9a-4929-a1ae-e667ca315de8
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ASSIGNMENT
+            nodeName: SRC_A
+        join:
+          joinCondition: FROM {{ ref('ASSIGNMENT', 'SRC_A') }} "SRC_A"
+        name: DT_WRK_SRC_A
+        noLinkRefs: []
+      - aliases:
+          SRC_B: 7bd7c640-1c49-496e-b096-71a6c1b05694
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ASSIGNMENT
+            nodeName: SRC_B
+        join:
+          joinCondition: "   FROM {{ ref('ASSIGNMENT', 'SRC_B') }} \"SRC_B\""
+        name: NEW_SOURCE
+        noLinkRefs: []
+  name: DT_WRK_SRC_A
+  overrideSQL: false
+  schema: ""
+  sqlType: new-dynamic:::347
+  type: sql
+  version: 1
+type: Node
